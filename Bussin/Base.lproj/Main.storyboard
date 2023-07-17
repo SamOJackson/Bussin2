@@ -11,7 +11,7 @@
         <!--Maps-->
         <scene sceneID="rlO-Aa-nHN">
             <objects>
-                <viewController id="Gqm-1F-cmc" userLabel="Maps" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapsViewController" id="Gqm-1F-cmc" userLabel="Maps" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1vF-Y3-Mqj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
         <!--Routes-->
         <scene sceneID="Mn8-Xf-SOI">
             <objects>
-                <viewController id="BFS-fB-Au3" userLabel="Routes" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RoutesViewController" id="BFS-fB-Au3" userLabel="Routes" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NHX-WO-1yX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,7 +181,7 @@
         <!--Passes-->
         <scene sceneID="NtB-6d-mKj">
             <objects>
-                <viewController id="LKN-5V-crK" userLabel="Passes" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PassesViewController" id="LKN-5V-crK" userLabel="Passes" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dwy-O4-2cN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -286,8 +286,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Check Out"/>
                                 <connections>
-                                    <action selector="CheckOut:" destination="LKN-5V-crK" eventType="touchUpInside" id="qNy-f4-1Jv"/>
-                                    <segue destination="Uj4-yM-yyQ" kind="presentation" id="otU-JG-eSo"/>
+                                    <action selector="CheckOut:" destination="LKN-5V-crK" eventType="touchUpInside" id="Kuj-px-f1S"/>
+                                    <segue destination="Uj4-yM-yyQ" kind="show" identifier="showPurchaseViewController" id="otU-JG-eSo"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMR-HM-6kI">
@@ -329,7 +329,7 @@
         <!--Notifications-->
         <scene sceneID="8FJ-Vv-J5f">
             <objects>
-                <viewController id="NfT-ID-EnR" userLabel="Notifications" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationsViewController" id="NfT-ID-EnR" userLabel="Notifications" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hU9-is-L7y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,7 +400,7 @@
         <!-- Payment-->
         <scene sceneID="VBR-t4-ybu">
             <objects>
-                <viewController id="Uj4-yM-yyQ" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PurchaseViewController" id="Uj4-yM-yyQ" customClass="PurchaseViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3pa-gD-doF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -452,23 +452,23 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Pay Now"/>
                                 <connections>
-                                    <action selector="PayNow:" destination="Uj4-yM-yyQ" eventType="touchUpInside" id="OnN-sy-YBl"/>
+                                    <action selector="PayNow:" destination="Uj4-yM-yyQ" eventType="touchUpInside" id="KkF-XZ-Ec8"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YYs-J9-bcb">
-                                <rect key="frame" x="62" y="524" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Total: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ouE-vw-5pN">
                                 <rect key="frame" x="16" y="357" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YYs-J9-bcb">
+                                <rect key="frame" x="62" y="524" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -491,24 +491,25 @@
                             <constraint firstItem="GMn-r7-naU" firstAttribute="leading" secondItem="ekq-6W-ooC" secondAttribute="leading" constant="156" id="zPl-Wu-p3O"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cxx-pg-ZMN"/>
                     <string key="userLabel" base64-UTF8="YES">
 CFBheW1lbnQ
 </string>
                     <connections>
-                        <outlet property="Reciept" destination="YYs-J9-bcb" id="ptD-dP-TcR"/>
-                        <outlet property="cardNumber" destination="7aM-zz-hAp" id="SSj-Nv-PNZ"/>
-                        <outlet property="finalTotal" destination="ouE-vw-5pN" id="5IE-ox-MGI"/>
-                        <outlet property="name" destination="qkj-SJ-ogq" id="Sqs-Aq-LAD"/>
+                        <outlet property="Reciept" destination="YYs-J9-bcb" id="iMn-5K-y2h"/>
+                        <outlet property="cardNumber" destination="7aM-zz-hAp" id="zIc-QF-We1"/>
+                        <outlet property="name" destination="qkj-SJ-ogq" id="Siz-1u-csY"/>
+                        <outlet property="total" destination="ouE-vw-5pN" id="U40-mq-hRc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZH-Lx-4Ta" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2043.5114503816792" y="17.605633802816904"/>
+            <point key="canvasLocation" x="2053" y="8"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="d4C-38-Ubc"/>
-        <segue reference="NdW-L8-SLH"/>
+        <segue reference="vyr-Ca-9mZ"/>
         <segue reference="JhS-zI-cT6"/>
         <segue reference="pma-cp-wGT"/>
     </inferredMetricsTieBreakers>

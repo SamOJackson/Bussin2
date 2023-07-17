@@ -13,6 +13,7 @@
 		D537A2672A5EF5C000796994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D537A2652A5EF5C000796994 /* Main.storyboard */; };
 		D537A2692A5EF5C000796994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D537A2682A5EF5C000796994 /* Assets.xcassets */; };
 		D537A26C2A5EF5C000796994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D537A26A2A5EF5C000796994 /* LaunchScreen.storyboard */; };
+		D5AD49BF2A698CAB002FCC7E /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD49BE2A698CAB002FCC7E /* PurchaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D537A2682A5EF5C000796994 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D537A26B2A5EF5C000796994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D537A26D2A5EF5C000796994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5AD49BE2A698CAB002FCC7E /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				D537A25F2A5EF5C000796994 /* AppDelegate.swift */,
 				D537A2612A5EF5C000796994 /* SceneDelegate.swift */,
+				D5AD49BE2A698CAB002FCC7E /* PurchaseViewController.swift */,
 				D537A2632A5EF5C000796994 /* ViewController.swift */,
 				D537A2652A5EF5C000796994 /* Main.storyboard */,
 				D537A2682A5EF5C000796994 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D537A2642A5EF5C000796994 /* ViewController.swift in Sources */,
+				D5AD49BF2A698CAB002FCC7E /* PurchaseViewController.swift in Sources */,
 				D537A2602A5EF5C000796994 /* AppDelegate.swift in Sources */,
 				D537A2622A5EF5C000796994 /* SceneDelegate.swift in Sources */,
 			);
