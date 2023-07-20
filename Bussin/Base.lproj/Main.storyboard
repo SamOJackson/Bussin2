@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,7 @@
         <!--Maps-->
         <scene sceneID="rlO-Aa-nHN">
             <objects>
-                <viewController id="Gqm-1F-cmc" userLabel="Maps" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gqm-1F-cmc" userLabel="Maps" customClass="MapsViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1vF-Y3-Mqj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,6 +55,11 @@
                                     <segue destination="LKN-5V-crK" kind="presentation" id="vyr-Ca-9mZ"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="siT-PB-1rt">
+                                <rect key="frame" x="17" y="133" width="360" height="556"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OFc-NI-xKK"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
@@ -74,10 +80,13 @@
                             <constraint firstItem="cvN-eP-xnI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gtX-f7-rtA" secondAttribute="trailing" constant="8" symbolic="YES" id="w7C-6c-IDJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="MKMapView" destination="siT-PB-1rt" id="WMp-ag-BeQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZpQ-hw-Fk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-532" y="8"/>
+            <point key="canvasLocation" x="-532.06106870229007" y="7.746478873239437"/>
         </scene>
         <!--Routes-->
         <scene sceneID="Mn8-Xf-SOI">
@@ -507,9 +516,9 @@ CFBheW1lbnQ
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d4C-38-Ubc"/>
-        <segue reference="NdW-L8-SLH"/>
-        <segue reference="JhS-zI-cT6"/>
+        <segue reference="k18-72-Pbw"/>
+        <segue reference="vyr-Ca-9mZ"/>
+        <segue reference="3Zd-Cu-wHT"/>
         <segue reference="pma-cp-wGT"/>
     </inferredMetricsTieBreakers>
     <resources>

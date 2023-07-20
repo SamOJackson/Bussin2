@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8100EC02A69A8FA00A4FDBE /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8100EBF2A69A8FA00A4FDBE /* MapsViewController.swift */; };
 		D537A2602A5EF5C000796994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A25F2A5EF5C000796994 /* AppDelegate.swift */; };
 		D537A2622A5EF5C000796994 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A2612A5EF5C000796994 /* SceneDelegate.swift */; };
 		D537A2642A5EF5C000796994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A2632A5EF5C000796994 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A8100EBF2A69A8FA00A4FDBE /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsViewController.swift; path = "../../Bussin2-wayne/Bussin/MapsViewController.swift"; sourceTree = "<group>"; };
 		D537A25C2A5EF5C000796994 /* Bussin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bussin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D537A25F2A5EF5C000796994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D537A2612A5EF5C000796994 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				D537A25F2A5EF5C000796994 /* AppDelegate.swift */,
 				D537A2612A5EF5C000796994 /* SceneDelegate.swift */,
 				D537A2632A5EF5C000796994 /* ViewController.swift */,
+				A8100EBF2A69A8FA00A4FDBE /* MapsViewController.swift */,
 				D537A2652A5EF5C000796994 /* Main.storyboard */,
 				D537A2682A5EF5C000796994 /* Assets.xcassets */,
 				D537A26A2A5EF5C000796994 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				D537A2642A5EF5C000796994 /* ViewController.swift in Sources */,
 				D537A2602A5EF5C000796994 /* AppDelegate.swift in Sources */,
 				D537A2622A5EF5C000796994 /* SceneDelegate.swift in Sources */,
+				A8100EC02A69A8FA00A4FDBE /* MapsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
