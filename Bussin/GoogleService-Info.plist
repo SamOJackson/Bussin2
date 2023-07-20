@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1062991739088-6u089h12rcjngi04ge80jlqe7k5i8iaf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1062991739088-6u089h12rcjngi04ge80jlqe7k5i8iaf</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB9qNy9bsmf040FNgFTo6Ha6k2ZjDB6jzU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1062991739088</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ca.georgiancollegge</string>
+	<key>PROJECT_ID</key>
+	<string>busit-33d64</string>
+	<key>STORAGE_BUCKET</key>
+	<string>busit-33d64.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1062991739088:ios:f29242a136aff7179086d5</string>
+	<key>DATABASE_URL</key>
+	<string>https://busit-33d64-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
