@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PurchaseViewController: UIViewController {
 
@@ -26,7 +27,10 @@ class PurchaseViewController: UIViewController {
         let username = name.text!;
         let cardNumber = cardNumber.text!;
         Reciept.text = " \(username) , thank you for your purchase. Your order number is: \(orderNumber)\n \(receivedOrder) Total: $\(receivedTotal)";
-        
+        let dbManager = OrdersDatabaseManager()
+
+        dbManager.addOrder(name: username, cardNumber: cardNumber, total: Double(receivedTotal) ?? 0.0, date: Date())
     }
+    
 
 }
