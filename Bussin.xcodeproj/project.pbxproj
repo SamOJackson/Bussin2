@@ -12,6 +12,8 @@
 		2418CE992A69912B00334EFC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 2418CE982A69912B00334EFC /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		2418CE9B2A69912B00334EFC /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2418CE9A2A69912B00334EFC /* FirebaseDatabase */; };
 		2418CE9D2A69912B00334EFC /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2418CE9C2A69912B00334EFC /* FirebaseDatabaseSwift */; };
+		2418CE9F2A69AAB200334EFC /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2418CE9E2A69AAB200334EFC /* NotificationTableViewController.swift */; };
+		2418CEA12A69ACF100334EFC /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2418CEA02A69ACF100334EFC /* NotificationViewController.swift */; };
 		D537A2602A5EF5C000796994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A25F2A5EF5C000796994 /* AppDelegate.swift */; };
 		D537A2622A5EF5C000796994 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A2612A5EF5C000796994 /* SceneDelegate.swift */; };
 		D537A2642A5EF5C000796994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A2632A5EF5C000796994 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		2418CE932A698F6F00334EFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2418CE9E2A69AAB200334EFC /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
+		2418CEA02A69ACF100334EFC /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		D537A25C2A5EF5C000796994 /* Bussin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bussin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D537A25F2A5EF5C000796994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D537A2612A5EF5C000796994 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				D537A26A2A5EF5C000796994 /* LaunchScreen.storyboard */,
 				D537A26D2A5EF5C000796994 /* Info.plist */,
 				2418CE932A698F6F00334EFC /* GoogleService-Info.plist */,
+				2418CE9E2A69AAB200334EFC /* NotificationTableViewController.swift */,
+				2418CEA02A69ACF100334EFC /* NotificationViewController.swift */,
 			);
 			path = Bussin;
 			sourceTree = "<group>";
@@ -159,8 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2418CEA12A69ACF100334EFC /* NotificationViewController.swift in Sources */,
 				D537A2642A5EF5C000796994 /* ViewController.swift in Sources */,
 				D537A2602A5EF5C000796994 /* AppDelegate.swift in Sources */,
+				2418CE9F2A69AAB200334EFC /* NotificationTableViewController.swift in Sources */,
 				D537A2622A5EF5C000796994 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,7 +330,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = GeorgianCollege.Bussin;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.georgiancollegge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -351,7 +359,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = GeorgianCollege.Bussin;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.georgiancollegge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
