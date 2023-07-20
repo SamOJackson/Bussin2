@@ -13,7 +13,6 @@ class OrdersDatabaseManager {
     private var databaseReference: DatabaseReference!
 
     init() {
-        FirebaseApp.configure()
         databaseReference = Database.database().reference()
     }
 
