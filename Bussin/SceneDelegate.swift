@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Bussin
 //
-//  Created by user244653 on 7/12/23.
+//  Created by Sam Jackson on 7/12/23.
 //
 
 import UIKit

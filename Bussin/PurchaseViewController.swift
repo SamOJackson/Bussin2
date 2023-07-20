@@ -1,8 +1,7 @@
 //
 //  PurchaseViewController.swift
 //  Bussin
-// Sam Jackson
-//  Created by user244653 on 7/20/23.
+//  Created by Sam Jackson on 7/20/23.
 //
 
 import UIKit
