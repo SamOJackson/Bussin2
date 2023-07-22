@@ -11,7 +11,6 @@ class NotificationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lbl_notification_type: UILabel!
     @IBOutlet weak var lbl_notification_message: UILabel!
-    @IBOutlet weak var lbl_notification_image: UIImageView!
     @IBOutlet weak var lbl_notification_startDate: UILabel!
     @IBOutlet weak var lbl_notification_endDate: UILabel!
     

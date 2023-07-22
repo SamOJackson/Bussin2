@@ -12,89 +12,66 @@ import Firebase
 class NotificationTableViewController: UITableViewController {
     
     
-    var databaseReference: DatabaseReference!;
+    var databaseReference = Database.database().reference().child("Notifications");
     
     var databaseNotificationArray: Array<Notification> = Array();
     
     
     // load notifications from the Firebase database into the controller
     func loadNotifications() {
-        Task{
-            do{
-                let inMemoryDatabase = try await databaseReference.ref.child("Notifications").getData();
-                for child in inMemoryDatabase.children{
-                    print("child",child);
-                    print("typeof",type(of: child))
-                }
-            }catch{
-            }
-        }
+        
+        // iterate over every notification in the database
+        databaseReference.queryOrderedByKey().observe(.childAdded, with: {
+            (notificationSnapshot) in
+            
+            //load data from the snapshot into a swift Notification Object
+            self.databaseNotificationArray.append(Notification.decodeDataSnapshot(dataSnapshot: notificationSnapshot))
+            
+            //reload the data on the table
+            self.tableView.reloadData();
+        })
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadNotifications();
         
-        
-        databaseReference = Database.database().reference();
-        
-        var databaseObserver = databaseReference.child("Notifications").observe( .value, with: { snapshot in
-            for child in snapshot.children{
-                //let currentNotification = new Notifcation(id: child);
-                
-                
-                print("data in child",child);
-                
-                print("type of child ",type(of: child))
-                
-            }
-        })
-        
-        
-        //var inMemoryDatabase = loadNotifications();
-        
-        print("data in databaseNotificationArray",databaseNotificationArray);
-        
-        //code to access database
-        /*
-        databaseReference.ref.child("Notifications").setValue([
-            "Title": "Demo",
-            "Message" : "There is an error in the program I would like to fix",
-            "StartDate" : Date(),
-            "EndDate" : Date()
-        ]);
-         */
-        
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // set the height of the cells to accomodate the text inside them
+        self.tableView.rowHeight = 150.0;
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.databaseNotificationArray.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "notificationCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as! NotificationTableViewCell
         
-        /*
-        cell.lbl_notification_type.text
-        cell.lbl_notification_message.text
-        cell.lbl_notification_image.text
-        cell.lbl_notification_startDate.text
-        cell.lbl_notification_endDate.text
-         */
+        
+        cell.lbl_notification_type.text = databaseNotificationArray[indexPath.row].title
+        cell.lbl_notification_message.text = databaseNotificationArray[indexPath.row].message
+        cell.lbl_notification_startDate.text = databaseNotificationArray[indexPath.row].startDate
+        
+        //check if there is a value in the notification end date
+        if let endDateText = databaseNotificationArray[indexPath.row].endDate {
+            
+            // if there is set the label to display it
+            cell.lbl_notification_endDate.text = databaseNotificationArray[indexPath.row].endDate
+        }else{
+            // if not tell the label it's undefined
+            cell.lbl_notification_endDate.text = "undetermined"
+        }
+        
+        
 
         // Configure the cell...
 
