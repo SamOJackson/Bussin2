@@ -11,11 +11,15 @@ import Firebase
 
 class NotificationTableViewController: UITableViewController {
     
-    
+    // save a reference to the database
     var databaseReference = Database.database().reference().child("Notifications");
     
+    // save a copy of the database in memory
     var databaseNotificationArray: Array<Notification> = Array();
     
+    
+    //stores the last notification the user selected (primarily used for obtaining the selected notificaton in parent)
+    var selectedNotification: Notification?;
     
     // load notifications from the Firebase database into the controller
     func loadNotifications() {
@@ -52,7 +56,7 @@ class NotificationTableViewController: UITableViewController {
         return self.databaseNotificationArray.count
     }
 
-    
+    //handle loading all storyboard cells into the table
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as! NotificationTableViewCell
         
@@ -70,12 +74,19 @@ class NotificationTableViewController: UITableViewController {
             // if not tell the label it's undefined
             cell.lbl_notification_endDate.text = "undetermined"
         }
-        
-        
-
-        // Configure the cell...
 
         return cell
+    }
+    
+    
+    //handle clicking on individual items in the list
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // set the lastSelectedNotification
+        selectedNotification = databaseNotificationArray[indexPath.row];
+        
+        // send a notification to the parent NotificationViewController that indicatates that a value has been selected
+        NotificationCenter.default.post(name: NSNotification.Name("com.notification.selected"), object: nil)
+        
     }
 
     /*
