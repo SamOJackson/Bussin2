@@ -39,6 +39,8 @@ class ViewController: UIViewController {
         firstTotal.text = "Total: \(String(doubleTotal))"
     }
 
+//    comment
+
     @IBAction func CheckOut(_ sender: Any) {
         performSegue(withIdentifier: "showPurchaseViewController", sender: nil)
     }
