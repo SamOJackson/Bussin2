@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gqm-1F-cmc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gqm-1F-cmc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
-    <dependencies>        
+    <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,15 +14,12 @@
         <scene sceneID="rlO-Aa-nHN">
             <objects>
                 <viewController id="Gqm-1F-cmc" userLabel="Maps" customClass="MapsViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
-
-                <viewController storyboardIdentifier="MapsViewController" id="Gqm-1F-cmc" userLabel="Maps" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
-
                     <view key="view" contentMode="scaleToFill" id="1vF-Y3-Mqj">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmV-XJ-NVu" customClass="titleLabel">
-                                <rect key="frame" x="156" y="122" width="81" height="53"/>
+                                <rect key="frame" x="156" y="63" width="81" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="XjG-Dk-ygj"/>
                                 </constraints>
@@ -32,17 +28,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ld-6g-01D">
-                                <rect key="frame" x="26" y="692" width="66" height="35"/>
+                                <rect key="frame" x="26" y="751" width="66" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Maps"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtX-f7-rtA">
-                                <rect key="frame" x="99" y="692" width="77" height="35"/>
+                                <rect key="frame" x="99" y="751" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Routes"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaw-78-Urn">
-                                <rect key="frame" x="162" y="692" width="120" height="35"/>
+                                <rect key="frame" x="162" y="751" width="120" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Notifications"/>
                                 <connections>
@@ -50,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvN-eP-xnI">
-                                <rect key="frame" x="289" y="692" width="78" height="35"/>
+                                <rect key="frame" x="289" y="751" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Passes"/>
                                 <connections>
@@ -96,11 +92,11 @@
             <objects>
                 <viewController storyboardIdentifier="RoutesViewController" id="BFS-fB-Au3" userLabel="Routes" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NHX-WO-1yX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czd-G0-zCA">
-                                <rect key="frame" x="26" y="692" width="66" height="35"/>
+                                <rect key="frame" x="26" y="751" width="66" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Maps"/>
                                 <connections>
@@ -108,12 +104,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycg-0m-Js4">
-                                <rect key="frame" x="99" y="692" width="77" height="35"/>
+                                <rect key="frame" x="99" y="751" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Routes"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wm-RK-WVO">
-                                <rect key="frame" x="162" y="692" width="120" height="35"/>
+                                <rect key="frame" x="162" y="751" width="120" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Notifications"/>
                                 <connections>
@@ -121,7 +117,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmI-uT-irh">
-                                <rect key="frame" x="289" y="692" width="78" height="35"/>
+                                <rect key="frame" x="289" y="751" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Passes"/>
                                 <connections>
@@ -318,13 +314,13 @@
         <!--Passes-->
         <scene sceneID="NtB-6d-mKj">
             <objects>
-                <viewController storyboardIdentifier="PassesViewController" id="LKN-5V-crK" userLabel="Passes" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PassesViewController" id="LKN-5V-crK" userLabel="Passes" customClass="PassesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dwy-O4-2cN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfE-sd-QLh">
-                                <rect key="frame" x="26" y="692" width="66" height="35"/>
+                                <rect key="frame" x="26" y="751" width="66" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Maps"/>
                                 <connections>
@@ -332,7 +328,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVY-3b-A0v">
-                                <rect key="frame" x="99" y="692" width="77" height="35"/>
+                                <rect key="frame" x="99" y="751" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Routes"/>
                                 <connections>
@@ -340,7 +336,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qs3-O9-YHy">
-                                <rect key="frame" x="162" y="692" width="120" height="35"/>
+                                <rect key="frame" x="162" y="751" width="120" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Notifications"/>
                                 <connections>
@@ -348,7 +344,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywU-to-sRv">
-                                <rect key="frame" x="289" y="692" width="78" height="35"/>
+                                <rect key="frame" x="289" y="751" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Passes"/>
                             </button>
@@ -472,7 +468,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yig-do-lcd">
-                                <rect key="frame" x="26" y="727" width="66" height="35"/>
+                                <rect key="frame" x="26" y="761" width="66" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Maps"/>
                                 <connections>
@@ -480,7 +476,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLa-FJ-th8">
-                                <rect key="frame" x="99" y="727" width="77" height="35"/>
+                                <rect key="frame" x="99" y="761" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Routes"/>
                                 <connections>
@@ -488,12 +484,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bS6-CN-lyx">
-                                <rect key="frame" x="162" y="727" width="120" height="35"/>
+                                <rect key="frame" x="162" y="761" width="120" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Notifications"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO6-fT-oLK">
-                                <rect key="frame" x="289" y="727" width="78" height="35"/>
+                                <rect key="frame" x="289" y="761" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Passes"/>
                                 <connections>
@@ -597,26 +593,26 @@
             <objects>
                 <viewController storyboardIdentifier="PurchaseViewController" id="Uj4-yM-yyQ" customClass="PurchaseViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3pa-gD-doF">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0Q-gT-7bu">
-                                <rect key="frame" x="26" y="692" width="66" height="35"/>
+                                <rect key="frame" x="26" y="751" width="66" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Maps"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBb-bD-VRU">
-                                <rect key="frame" x="99" y="692" width="77" height="35"/>
+                                <rect key="frame" x="99" y="751" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Routes"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgY-q1-fyL">
-                                <rect key="frame" x="162" y="692" width="120" height="35"/>
+                                <rect key="frame" x="162" y="751" width="120" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Notifications"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vZ-Vf-4Xv">
-                                <rect key="frame" x="289" y="692" width="78" height="35"/>
+                                <rect key="frame" x="289" y="751" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Passes"/>
                             </button>
@@ -781,17 +777,10 @@ CFBheW1lbnQ
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-
-        <segue reference="k18-72-Pbw"/>
+        <segue reference="d4C-38-Ubc"/>
         <segue reference="vyr-Ca-9mZ"/>
         <segue reference="JhS-zI-cT6"/>
         <segue reference="pma-cp-wGT"/>
-
-        <segue reference="d4C-38-Ubc"/>
-        <segue reference="NdW-L8-SLH"/>
-        <segue reference="1dO-hM-VFX"/>
-        <segue reference="lxo-JD-zFo"/>
-
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">

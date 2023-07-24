@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Bus stop model
 struct BusStop {
     var stopId: String
     var stopName: String
