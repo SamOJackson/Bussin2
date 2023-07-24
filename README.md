@@ -1,5 +1,5 @@
 # Bussin2
-#Sam Jackson Contribution:
+##Sam Jackson Contribution:
 Create the project 
 Create Splash Screen
 Change App Icon.
@@ -12,7 +12,8 @@ created database link to Orders table
 Created DatabaseManager class
 Created the OrderViewController and OrderViewContoller view
 
-#Wayne Nyguen Contribution:
+##Wayne Nyguen Contribution:
 
 
-Alexander Gullen Contribution:
+##Alexander Gullen Contribution:
+Notificaiton View Controller, Notification Table View, firebase integration, asset and image collection
