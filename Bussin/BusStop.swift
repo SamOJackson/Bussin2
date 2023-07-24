@@ -8,8 +8,8 @@
 import Foundation
 
 struct BusStop {
-    let stopId: String
-    let name: String
-    let latitude: Double
-    let longitude: Double
+    var stopId: String
+    var stopName: String
+    var latitude: Double
+    var longitude: Double
 }
