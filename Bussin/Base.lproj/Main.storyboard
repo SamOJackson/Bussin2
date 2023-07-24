@@ -229,7 +229,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="918-Dy-Vav">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusStopCell" id="918-Dy-Vav" customClass="BusStopTableViewCell" customModule="Bussin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="300" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="918-Dy-Vav" id="k4z-bq-KOq">
@@ -266,6 +266,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellIdTextLabel" destination="mMq-T3-RN7" id="uKF-k3-vLN"/>
+                                            <outlet property="cellLatitudeLabel" destination="DWQ-p8-JlH" id="uht-Cb-BKU"/>
+                                            <outlet property="cellLongitudeLabel" destination="YvY-J7-4a8" id="ZVO-Cu-gVt"/>
+                                            <outlet property="cellNameTextLabel" destination="Qyp-cd-DwN" id="ndY-TR-nzU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -287,19 +293,12 @@
                                     <action selector="saveButtonTapped:" destination="Csx-Xw-RUM" eventType="touchUpInside" id="huE-MN-Sfi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvD-8S-aMF">
-                                <rect key="frame" x="160" y="335" width="74" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Delete"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gtv-HV-hcr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="oBQ-mu-Ipw"/>
                     <connections>
-                        <outlet property="deleteButotn" destination="DvD-8S-aMF" id="8mk-CM-Mdb"/>
                         <outlet property="latitudeTextField" destination="Dkf-fl-9HX" id="PSl-jQ-tpZ"/>
                         <outlet property="longitudeTextField" destination="MdV-IC-Quf" id="0H8-bH-zP6"/>
                         <outlet property="stopIdTextField" destination="YB2-z4-hTs" id="5xZ-Ta-dy1"/>

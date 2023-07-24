@@ -15,6 +15,7 @@
 		A83AAB872A6EB95C00EC8A3B /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB862A6EB95C00EC8A3B /* BusStop.swift */; };
 		A83AAB892A6EB98A00EC8A3B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB882A6EB98A00EC8A3B /* FirebaseManager.swift */; };
 		A83AAB8B2A6EBCE000EC8A3B /* AdminStopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB8A2A6EBCE000EC8A3B /* AdminStopsViewController.swift */; };
+		A83AAB8D2A6ECB6500EC8A3B /* BusStopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB8C2A6ECB6500EC8A3B /* BusStopTableViewCell.swift */; };
 		D537A2602A5EF5C000796994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A25F2A5EF5C000796994 /* AppDelegate.swift */; };
 		D537A2622A5EF5C000796994 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A2612A5EF5C000796994 /* SceneDelegate.swift */; };
 		D537A2642A5EF5C000796994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A2632A5EF5C000796994 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		A83AAB862A6EB95C00EC8A3B /* BusStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
 		A83AAB882A6EB98A00EC8A3B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		A83AAB8A2A6EBCE000EC8A3B /* AdminStopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminStopsViewController.swift; sourceTree = "<group>"; };
+		A83AAB8C2A6ECB6500EC8A3B /* BusStopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopTableViewCell.swift; sourceTree = "<group>"; };
 		D537A25C2A5EF5C000796994 /* Bussin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bussin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D537A25F2A5EF5C000796994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D537A2612A5EF5C000796994 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				A83AAB862A6EB95C00EC8A3B /* BusStop.swift */,
 				A83AAB882A6EB98A00EC8A3B /* FirebaseManager.swift */,
 				A83AAB8A2A6EBCE000EC8A3B /* AdminStopsViewController.swift */,
+				A83AAB8C2A6ECB6500EC8A3B /* BusStopTableViewCell.swift */,
 			);
 			path = Bussin;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				D537A2642A5EF5C000796994 /* ViewController.swift in Sources */,
 				A83AAB8B2A6EBCE000EC8A3B /* AdminStopsViewController.swift in Sources */,
 				A83AAB892A6EB98A00EC8A3B /* FirebaseManager.swift in Sources */,
+				A83AAB8D2A6ECB6500EC8A3B /* BusStopTableViewCell.swift in Sources */,
 				D537A2602A5EF5C000796994 /* AppDelegate.swift in Sources */,
 				D537A2622A5EF5C000796994 /* SceneDelegate.swift in Sources */,
 				A83AAB852A6EB94200EC8A3B /* Route.swift in Sources */,

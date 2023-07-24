@@ -18,7 +18,7 @@ class FirebaseManager {
 
         let data: [String: Any] = [
             "stopId": busStop.stopId,
-            "name": busStop.name,
+            "stopName": busStop.stopName,
             "latitude": busStop.latitude,
             "longitude": busStop.longitude
         ]
@@ -41,10 +41,10 @@ class FirebaseManager {
             for document in querySnapshot!.documents {
                 let busStopData = document.data()
                 let stopId = document.documentID
-                let name = busStopData["name"] as? String ?? ""
+                let stopName = busStopData["stopName"] as? String ?? ""
                 let latitude = busStopData["latitude"] as? Double ?? 0.0
                 let longitude = busStopData["longitude"] as? Double ?? 0.0
-                let busStop = BusStop(stopId: stopId, name: name, latitude: latitude, longitude: longitude)
+                let busStop = BusStop(stopId: stopId, stopName: stopName, latitude: latitude, longitude: longitude)
                 busStops.append(busStop)
             }
 
@@ -59,7 +59,7 @@ class FirebaseManager {
 
         let data: [String: Any] = [
             "stopId": busStop.stopId,
-            "name": busStop.name,
+            "stopName": busStop.stopName,
             "latitude": busStop.latitude,
             "longitude": busStop.longitude
         ]

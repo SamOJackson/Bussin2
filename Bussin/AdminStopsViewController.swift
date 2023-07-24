@@ -15,7 +15,7 @@ class AdminStopsViewController: UIViewController {
     @IBOutlet weak var stopNameTextField: UITextField!
     @IBOutlet weak var latitudeTextField: UITextField!
     @IBOutlet weak var longitudeTextField: UITextField!
-    @IBOutlet weak var deleteButotn: UIButton!
+
     
     var busStops: [BusStop] = []
     var selectedRowIndex: Int? // To keep track of the selected row index in the table view
@@ -73,7 +73,7 @@ class AdminStopsViewController: UIViewController {
                 } else {
                     // Create new bus stop
                     let newBusStop = BusStop(stopId: stopId, stopName: stopName, latitude: latitude, longitude: longitude)
-                    .createBusStop(busStop: newBusStop) { error in
+                    FirebaseManager.createBusStop(busStop: newBusStop) { error in
                         if let error = error {
                             print("Error creating bus stop: \(error.localizedDescription)")
                         } else {
@@ -122,14 +122,23 @@ class AdminStopsViewController: UIViewController {
 // MARK: - Table View Delegate and Data Source
 
 extension AdminStopsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return busStops.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BusStopCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BusStopCell", for: indexPath) as? BusStopTableViewCell else {
+            return UITableViewCell()
+        }
+
         let busStop = busStops[indexPath.row]
-        cell.textLabel?.text = busStop.stopName
+        cell.cellIdTextLabel.text = busStop.stopId
+        cell.cellNameTextLabel.text = busStop.stopName
+        cell.cellLatitudeLabel.text = String(busStop.latitude)
+        cell.cellLongitudeLabel.text = String(busStop.longitude)
+
         return cell
     }
 
