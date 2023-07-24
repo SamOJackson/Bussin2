@@ -35,9 +35,6 @@
                                 <rect key="frame" x="99" y="751" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Routes"/>
-                                <connections>
-                                    <segue destination="BFS-fB-Au3" kind="presentation" id="3Zd-Cu-wHT"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaw-78-Urn">
                                 <rect key="frame" x="162" y="751" width="120" height="35"/>
@@ -82,6 +79,7 @@
                     </view>
                     <connections>
                         <outlet property="MKMapView" destination="siT-PB-1rt" id="WMp-ag-BeQ"/>
+                        <outlet property="mapButton" destination="9Ld-6g-01D" id="Neg-Sl-Zdz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZpQ-hw-Fk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -186,6 +184,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1R-va-Sbd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="113.74045801526717" y="7.746478873239437"/>
+        </scene>
+        <!--Admin Stops View Controller-->
+        <scene sceneID="sXB-RL-QmK">
+            <objects>
+                <viewController storyboardIdentifier="AdminStopsViewController" id="Csx-Xw-RUM" customClass="AdminStopsViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Sp-ee-kmW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Gtv-HV-hcr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oBQ-mu-Ipw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wGS-yE-nkj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-532" y="774"/>
         </scene>
         <!--Passes-->
         <scene sceneID="NtB-6d-mKj">
@@ -518,7 +532,7 @@ CFBheW1lbnQ
     <inferredMetricsTieBreakers>
         <segue reference="k18-72-Pbw"/>
         <segue reference="vyr-Ca-9mZ"/>
-        <segue reference="3Zd-Cu-wHT"/>
+        <segue reference="JhS-zI-cT6"/>
         <segue reference="pma-cp-wGT"/>
     </inferredMetricsTieBreakers>
     <resources>
