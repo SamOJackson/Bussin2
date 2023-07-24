@@ -365,18 +365,9 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="NotificationList" translatesAutoresizingMaskIntoConstraints="NO" id="Gwb-LF-TVN">
-                                <rect key="frame" x="17" y="111" width="360" height="295"/>
+                                <rect key="frame" x="17" y="111" width="360" height="294"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="All Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J57-Ti-Tcg" customClass="titleLabel">
-                                <rect key="frame" x="17" y="50" width="221" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="PYC-sL-S9F"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wX-JU-CoV">
                                 <rect key="frame" x="17" y="432" width="225" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -426,6 +417,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J57-Ti-Tcg" customClass="titleLabel">
+                                <rect key="frame" x="16" y="59" width="221" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gju-Ej-sYm"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -433,12 +431,9 @@
                             <constraint firstItem="GO6-fT-oLK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bLa-FJ-th8" secondAttribute="trailing" constant="8" symbolic="YES" id="1fF-VG-rMY"/>
                             <constraint firstItem="bS6-CN-lyx" firstAttribute="baseline" secondItem="bLa-FJ-th8" secondAttribute="baseline" id="3Fo-yZ-ljD"/>
                             <constraint firstItem="GO6-fT-oLK" firstAttribute="leading" secondItem="bS6-CN-lyx" secondAttribute="trailing" constant="7" id="4fv-Ox-xEU"/>
-                            <constraint firstItem="J57-Ti-Tcg" firstAttribute="top" secondItem="gju-Ej-sYm" secondAttribute="top" constant="63" id="C1O-m8-5P2"/>
                             <constraint firstItem="gju-Ej-sYm" firstAttribute="bottom" secondItem="bS6-CN-lyx" secondAttribute="bottom" constant="56" id="Jh7-Ei-MRz"/>
-                            <constraint firstItem="J57-Ti-Tcg" firstAttribute="centerX" secondItem="hU9-is-L7y" secondAttribute="centerX" id="XcG-Ea-4ac"/>
                             <constraint firstItem="bS6-CN-lyx" firstAttribute="baseline" secondItem="GO6-fT-oLK" secondAttribute="baseline" id="btc-4g-tKe"/>
                             <constraint firstItem="bLa-FJ-th8" firstAttribute="leading" secondItem="Yig-do-lcd" secondAttribute="trailing" constant="7" id="gc7-KP-bCp"/>
-                            <constraint firstItem="J57-Ti-Tcg" firstAttribute="leading" secondItem="gju-Ej-sYm" secondAttribute="leading" constant="156" id="i40-Fd-Sj0"/>
                             <constraint firstItem="bS6-CN-lyx" firstAttribute="baseline" secondItem="Yig-do-lcd" secondAttribute="baseline" id="mvr-GS-LEm"/>
                             <constraint firstItem="bS6-CN-lyx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Yig-do-lcd" secondAttribute="trailing" constant="8" symbolic="YES" id="q2b-hh-SzH"/>
                             <constraint firstItem="bS6-CN-lyx" firstAttribute="leading" secondItem="hU9-is-L7y" secondAttribute="leading" constant="162" id="qH0-M7-mhl"/>
