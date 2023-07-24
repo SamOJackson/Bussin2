@@ -2,18 +2,25 @@
 //  AppDelegate.swift
 //  Bussin
 //
-//  Created by user244653 on 7/12/23.
+//  Created by Sam Jackson on 7/12/23.
 //
 
 import UIKit
 import Firebase
 
+
+import UIKit
+
+
+import Firebase
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // connect to firebase
+        FirebaseApp.configure()
+        
         // Override point for customization after application launch.
         FirebaseApp.configure()
         return true
