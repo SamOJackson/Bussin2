@@ -1,5 +1,5 @@
 # Bussin2
-##Sam Jackson Contribution:
+#Sam Jackson Contribution:
 Create the project 
 Create Splash Screen
 Change App Icon.
@@ -20,4 +20,7 @@ CRUD operation for BusStop
 
 
 ##Alexander Gullen Contribution:
-Notificaiton View Controller, Notification Table View, firebase integration, asset and image collection
+connected to Firebase realtime-database
+created the model for notifications,
+setup the notification table section,
+setup single notification section 

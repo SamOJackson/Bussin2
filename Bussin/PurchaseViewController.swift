@@ -29,7 +29,7 @@ class PurchaseViewController: UIViewController {
         Reciept.text = " \(username) , thank you for your purchase. Your order number is: \(orderNumber)\n \(receivedOrder) Total: $\(receivedTotal)";
         let dbManager = OrdersDatabaseManager()
 
-        dbManager.addOrder(name: username, cardNumber: cardNumber, total: Double(receivedTotal) ?? 0.0, date: Date())
+        dbManager.addOrder(order: orderNumber, name: username, cardNumber: cardNumber, total: Double(receivedTotal) ?? 0.0, date: Date())
     }
     
 

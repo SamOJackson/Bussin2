@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gqm-1F-cmc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gqm-1F-cmc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
-    <dependencies>        
+    <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,15 +14,12 @@
         <scene sceneID="rlO-Aa-nHN">
             <objects>
                 <viewController id="Gqm-1F-cmc" userLabel="Maps" customClass="MapsViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
-
-                <viewController storyboardIdentifier="MapsViewController" id="Gqm-1F-cmc" userLabel="Maps" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
-
                     <view key="view" contentMode="scaleToFill" id="1vF-Y3-Mqj">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmV-XJ-NVu" customClass="titleLabel">
-                                <rect key="frame" x="156" y="122" width="81" height="53"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmV-XJ-NVu">
+                                <rect key="frame" x="156" y="63" width="81" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="XjG-Dk-ygj"/>
                                 </constraints>
@@ -32,17 +28,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ld-6g-01D">
-                                <rect key="frame" x="26" y="692" width="66" height="35"/>
+                                <rect key="frame" x="26" y="751" width="66" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Maps"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtX-f7-rtA">
-                                <rect key="frame" x="99" y="692" width="77" height="35"/>
+                                <rect key="frame" x="99" y="751" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Routes"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaw-78-Urn">
-                                <rect key="frame" x="162" y="692" width="120" height="35"/>
+                                <rect key="frame" x="162" y="751" width="120" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Notifications"/>
                                 <connections>
@@ -50,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvN-eP-xnI">
-                                <rect key="frame" x="289" y="692" width="78" height="35"/>
+                                <rect key="frame" x="289" y="751" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Passes"/>
                                 <connections>
@@ -96,11 +92,11 @@
             <objects>
                 <viewController storyboardIdentifier="RoutesViewController" id="BFS-fB-Au3" userLabel="Routes" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NHX-WO-1yX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czd-G0-zCA">
-                                <rect key="frame" x="26" y="692" width="66" height="35"/>
+                                <rect key="frame" x="26" y="751" width="66" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Maps"/>
                                 <connections>
@@ -108,12 +104,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycg-0m-Js4">
-                                <rect key="frame" x="99" y="692" width="77" height="35"/>
+                                <rect key="frame" x="99" y="751" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Routes"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wm-RK-WVO">
-                                <rect key="frame" x="162" y="692" width="120" height="35"/>
+                                <rect key="frame" x="162" y="751" width="120" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Notifications"/>
                                 <connections>
@@ -121,14 +117,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmI-uT-irh">
-                                <rect key="frame" x="289" y="692" width="78" height="35"/>
+                                <rect key="frame" x="289" y="751" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Passes"/>
                                 <connections>
                                     <segue destination="LKN-5V-crK" kind="presentation" id="kbs-su-WiZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Routes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAx-Lf-s3J" customClass="titleLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Routes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAx-Lf-s3J">
                                 <rect key="frame" x="147" y="116" width="99" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="zOP-S7-UHa"/>
@@ -318,13 +314,13 @@
         <!--Passes-->
         <scene sceneID="NtB-6d-mKj">
             <objects>
-                <viewController storyboardIdentifier="PassesViewController" id="LKN-5V-crK" userLabel="Passes" customClass="ViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PassesViewController" id="LKN-5V-crK" userLabel="Passes" customClass="PassesViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dwy-O4-2cN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfE-sd-QLh">
-                                <rect key="frame" x="26" y="692" width="66" height="35"/>
+                                <rect key="frame" x="26" y="751" width="66" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Maps"/>
                                 <connections>
@@ -332,7 +328,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVY-3b-A0v">
-                                <rect key="frame" x="99" y="692" width="77" height="35"/>
+                                <rect key="frame" x="99" y="751" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Routes"/>
                                 <connections>
@@ -340,7 +336,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qs3-O9-YHy">
-                                <rect key="frame" x="162" y="692" width="120" height="35"/>
+                                <rect key="frame" x="162" y="751" width="120" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Notifications"/>
                                 <connections>
@@ -348,11 +344,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywU-to-sRv">
-                                <rect key="frame" x="289" y="692" width="78" height="35"/>
+                                <rect key="frame" x="289" y="751" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Passes"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Passes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwi-xJ-MOJ" customClass="titleLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Passes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwi-xJ-MOJ">
                                 <rect key="frame" x="146" y="118" width="101" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="zx0-sJ-hbY"/>
@@ -388,7 +384,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add"/>
                                 <connections>
-                                    <action selector="AddDayPass:" destination="LKN-5V-crK" eventType="touchUpInside" id="JWM-Xr-d5m"/>
+                                    <action selector="AddDayPass:" destination="LKN-5V-crK" eventType="touchUpInside" id="Z7I-VY-9Z4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNr-2i-Qvl">
@@ -397,7 +393,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add"/>
                                 <connections>
-                                    <action selector="AddWeeklyPass:" destination="LKN-5V-crK" eventType="touchUpInside" id="W8q-TD-QzD"/>
+                                    <action selector="AddWeeklyPass:" destination="LKN-5V-crK" eventType="touchUpInside" id="jEO-YN-Q4z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tI-jv-Edf">
@@ -406,24 +402,16 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add"/>
                                 <connections>
-                                    <action selector="AddMonthlyPass:" destination="LKN-5V-crK" eventType="touchUpInside" id="nNn-vp-zP3"/>
+                                    <action selector="AddMonthlyPass:" destination="LKN-5V-crK" eventType="touchUpInside" id="nEl-mF-iQe"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1je-Ef-PzU">
-                                <rect key="frame" x="137" y="397" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4F-s3-m6j">
                                 <rect key="frame" x="64" y="586" width="105" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Check Out"/>
                                 <connections>
-                                    <action selector="CheckOut:" destination="LKN-5V-crK" eventType="touchUpInside" id="Kuj-px-f1S"/>
+                                    <action selector="CheckOut:" destination="LKN-5V-crK" eventType="touchUpInside" id="T33-ro-UsI"/>
                                     <segue destination="Uj4-yM-yyQ" kind="show" identifier="showPurchaseViewController" id="otU-JG-eSo"/>
                                 </connections>
                             </button>
@@ -434,6 +422,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1je-Ef-PzU">
+                                <rect key="frame" x="137" y="397" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3W3-t1-VaY"/>
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
@@ -455,8 +451,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="firstTotal" destination="gMR-HM-6kI" id="dUz-jN-1i9"/>
-                        <outlet property="totalTextBox" destination="1je-Ef-PzU" id="B8h-cR-uJ1"/>
+                        <outlet property="firstTotal" destination="gMR-HM-6kI" id="3dJ-B5-SS5"/>
+                        <outlet property="totalTextBox" destination="1je-Ef-PzU" id="kfu-QY-Hx0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fQ-Io-U9P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -468,11 +464,11 @@
             <objects>
                 <viewController storyboardIdentifier="NotificationsViewController" id="NfT-ID-EnR" userLabel="Notifications" customClass="NotificationViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hU9-is-L7y">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yig-do-lcd">
-                                <rect key="frame" x="26" y="727" width="66" height="35"/>
+                                <rect key="frame" x="26" y="751" width="66" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Maps"/>
                                 <connections>
@@ -480,7 +476,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLa-FJ-th8">
-                                <rect key="frame" x="99" y="727" width="77" height="35"/>
+                                <rect key="frame" x="99" y="751" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Routes"/>
                                 <connections>
@@ -488,12 +484,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bS6-CN-lyx">
-                                <rect key="frame" x="162" y="727" width="120" height="35"/>
+                                <rect key="frame" x="162" y="751" width="120" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Notifications"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO6-fT-oLK">
-                                <rect key="frame" x="289" y="727" width="78" height="35"/>
+                                <rect key="frame" x="289" y="751" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Passes"/>
                                 <connections>
@@ -501,7 +497,7 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="NotificationList" translatesAutoresizingMaskIntoConstraints="NO" id="Gwb-LF-TVN">
-                                <rect key="frame" x="17" y="111" width="360" height="294"/>
+                                <rect key="frame" x="17" y="101" width="360" height="294"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wX-JU-CoV">
@@ -553,7 +549,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J57-Ti-Tcg" customClass="titleLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J57-Ti-Tcg">
                                 <rect key="frame" x="16" y="59" width="221" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -597,31 +593,43 @@
             <objects>
                 <viewController storyboardIdentifier="PurchaseViewController" id="Uj4-yM-yyQ" customClass="PurchaseViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3pa-gD-doF">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0Q-gT-7bu">
-                                <rect key="frame" x="26" y="692" width="66" height="35"/>
+                                <rect key="frame" x="26" y="751" width="66" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Maps"/>
+                                <connections>
+                                    <segue destination="Gqm-1F-cmc" kind="presentation" id="eCQ-2n-3ba"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBb-bD-VRU">
-                                <rect key="frame" x="99" y="692" width="77" height="35"/>
+                                <rect key="frame" x="99" y="751" width="77" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Routes"/>
+                                <connections>
+                                    <segue destination="BFS-fB-Au3" kind="presentation" id="FkA-0j-MuW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgY-q1-fyL">
-                                <rect key="frame" x="162" y="692" width="120" height="35"/>
+                                <rect key="frame" x="162" y="751" width="120" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Notifications"/>
+                                <connections>
+                                    <segue destination="NfT-ID-EnR" kind="presentation" id="rbU-8I-bRG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vZ-Vf-4Xv">
-                                <rect key="frame" x="289" y="692" width="78" height="35"/>
+                                <rect key="frame" x="289" y="751" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Passes"/>
+                                <connections>
+                                    <segue destination="LKN-5V-crK" kind="presentation" id="Bia-8i-p7H"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Passes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMn-r7-naU" customClass="titleLabel">
-                                <rect key="frame" x="146" y="118" width="101" height="53"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMn-r7-naU">
+                                <rect key="frame" x="146" y="118" width="198" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="SUf-ek-586"/>
                                 </constraints>
@@ -666,6 +674,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKY-vm-lNM">
+                                <rect key="frame" x="267" y="306" width="77" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Orders"/>
+                                <connections>
+                                    <segue destination="NIE-Oc-qXX" kind="presentation" id="Cdt-mF-4z4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ekq-6W-ooC"/>
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
@@ -699,7 +716,7 @@ CFBheW1lbnQ
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZH-Lx-4Ta" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2053" y="8"/>
+            <point key="canvasLocation" x="113.74045801526717" y="-1030.2816901408451"/>
         </scene>
         <!--Notification Table View Controller-->
         <scene sceneID="V1I-vb-3iD">
@@ -779,19 +796,99 @@ CFBheW1lbnQ
             </objects>
             <point key="canvasLocation" x="749" y="704"/>
         </scene>
+        <!--Order-->
+        <scene sceneID="Waz-98-TDj">
+            <objects>
+                <viewController id="NIE-Oc-qXX" userLabel="Order" customClass="OrderViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FSq-wa-Hm5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBG-ZI-Iym">
+                                <rect key="frame" x="146" y="122" width="101" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Order Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejd-FS-DYu">
+                                <rect key="frame" x="51" y="253" width="221" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuW-tM-LiW">
+                                <rect key="frame" x="51" y="321" width="126" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Search Order"/>
+                                <connections>
+                                    <action selector="findOrder:" destination="NIE-Oc-qXX" eventType="touchUpInside" id="dvX-J1-EiA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJZ-6c-EBD">
+                                <rect key="frame" x="33" y="745" width="66" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Maps"/>
+                                <connections>
+                                    <segue destination="Gqm-1F-cmc" kind="presentation" id="MYF-db-KCw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUF-wr-WqF">
+                                <rect key="frame" x="101" y="745" width="77" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Routes"/>
+                                <connections>
+                                    <segue destination="BFS-fB-Au3" kind="presentation" id="pr8-Yi-XYG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KM1-sy-kXK">
+                                <rect key="frame" x="183" y="745" width="120" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Notifications"/>
+                                <connections>
+                                    <segue destination="NfT-ID-EnR" kind="presentation" id="LK7-1s-o6c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtR-9H-8TB">
+                                <rect key="frame" x="301" y="745" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Passes"/>
+                                <connections>
+                                    <segue destination="LKN-5V-crK" kind="presentation" id="fOm-Db-sod"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XDg-Ed-dy0">
+                                <rect key="frame" x="35" y="384" width="323" height="299"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lsK-Qb-O7b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="OrderNumber" destination="ejd-FS-DYu" id="eZf-3C-n4y"/>
+                        <outlet property="detailsText" destination="XDg-Ed-dy0" id="EC8-wL-yj1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yoR-Bj-70R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="-669"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-
-        <segue reference="k18-72-Pbw"/>
-        <segue reference="vyr-Ca-9mZ"/>
-        <segue reference="JhS-zI-cT6"/>
-        <segue reference="pma-cp-wGT"/>
-
-        <segue reference="d4C-38-Ubc"/>
-        <segue reference="NdW-L8-SLH"/>
-        <segue reference="1dO-hM-VFX"/>
-        <segue reference="lxo-JD-zFo"/>
-
+        <segue reference="LK7-1s-o6c"/>
+        <segue reference="fOm-Db-sod"/>
+        <segue reference="pr8-Yi-XYG"/>
+        <segue reference="MYF-db-KCw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
