@@ -7,16 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		A8100EC42A69B17D00A4FDBE /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8100EC32A69B17D00A4FDBE /* MapsViewController.swift */; };
-		A8100EC62A69B18D00A4FDBE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8100EC52A69B18C00A4FDBE /* GoogleService-Info.plist */; };
-		A8100EC92A69CFCD00A4FDBE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A8100EC82A69CFCD00A4FDBE /* FirebaseFirestore */; };
-		A8100ECB2A69CFCD00A4FDBE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A8100ECA2A69CFCD00A4FDBE /* FirebaseStorage */; };
-		A83AAB852A6EB94200EC8A3B /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB842A6EB94200EC8A3B /* Route.swift */; };
-		A83AAB872A6EB95C00EC8A3B /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB862A6EB95C00EC8A3B /* BusStop.swift */; };
-		A83AAB892A6EB98A00EC8A3B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB882A6EB98A00EC8A3B /* FirebaseManager.swift */; };
-		A83AAB8B2A6EBCE000EC8A3B /* AdminStopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB8A2A6EBCE000EC8A3B /* AdminStopsViewController.swift */; };
-		A83AAB8D2A6ECB6500EC8A3B /* BusStopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB8C2A6ECB6500EC8A3B /* BusStopTableViewCell.swift */; };
+		2418CE942A698F6F00334EFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2418CE932A698F6F00334EFC /* GoogleService-Info.plist */; };
 		2418CE972A69912B00334EFC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2418CE962A69912B00334EFC /* FirebaseAnalytics */; };
 		2418CE992A69912B00334EFC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 2418CE982A69912B00334EFC /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		2418CE9B2A69912B00334EFC /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2418CE9A2A69912B00334EFC /* FirebaseDatabase */; };
@@ -37,13 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A8100EC32A69B17D00A4FDBE /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
-		A8100EC52A69B18C00A4FDBE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A83AAB842A6EB94200EC8A3B /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		A83AAB862A6EB95C00EC8A3B /* BusStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
-		A83AAB882A6EB98A00EC8A3B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
-		A83AAB8A2A6EBCE000EC8A3B /* AdminStopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminStopsViewController.swift; sourceTree = "<group>"; };
-		A83AAB8C2A6ECB6500EC8A3B /* BusStopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopTableViewCell.swift; sourceTree = "<group>"; };
+		2418CE932A698F6F00334EFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2418CE9E2A69AAB200334EFC /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
 		2418CEA02A69ACF100334EFC /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		245A21572A6AF8EC00B8F10A /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
@@ -66,8 +51,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8100EC92A69CFCD00A4FDBE /* FirebaseFirestore in Frameworks */,
-				A8100ECB2A69CFCD00A4FDBE /* FirebaseStorage in Frameworks */,
 				2418CE9D2A69912B00334EFC /* FirebaseDatabaseSwift in Frameworks */,
 				2418CE9B2A69912B00334EFC /* FirebaseDatabase in Frameworks */,
 				2418CE972A69912B00334EFC /* FirebaseAnalytics in Frameworks */,
@@ -111,18 +94,12 @@
 				D5AD49BE2A698CAB002FCC7E /* PurchaseViewController.swift */,
 				D538B46C2A69BDB60066205C /* OrdersDatabaseManager.swift */,
 				D537A2632A5EF5C000796994 /* ViewController.swift */,
-				A8100EC32A69B17D00A4FDBE /* MapsViewController.swift */,
-				A8100EC52A69B18C00A4FDBE /* GoogleService-Info.plist */,
 				D537A2652A5EF5C000796994 /* Main.storyboard */,
 				D537A2682A5EF5C000796994 /* Assets.xcassets */,
 				D5AD49C32A6999DA002FCC7E /* bus-icon.png */,
 				D537A26A2A5EF5C000796994 /* LaunchScreen.storyboard */,
 				D537A26D2A5EF5C000796994 /* Info.plist */,
-				A83AAB842A6EB94200EC8A3B /* Route.swift */,
-				A83AAB862A6EB95C00EC8A3B /* BusStop.swift */,
-				A83AAB882A6EB98A00EC8A3B /* FirebaseManager.swift */,
-				A83AAB8A2A6EBCE000EC8A3B /* AdminStopsViewController.swift */,
-				A83AAB8C2A6ECB6500EC8A3B /* BusStopTableViewCell.swift */,
+				2418CE932A698F6F00334EFC /* GoogleService-Info.plist */,
 				2418CE9E2A69AAB200334EFC /* NotificationTableViewController.swift */,
 				2418CEA02A69ACF100334EFC /* NotificationViewController.swift */,
 				245A21572A6AF8EC00B8F10A /* NotificationTableViewCell.swift */,
@@ -147,8 +124,6 @@
 			);
 			name = Bussin;
 			packageProductDependencies = (
-				A8100EC82A69CFCD00A4FDBE /* FirebaseFirestore */,
-				A8100ECA2A69CFCD00A4FDBE /* FirebaseStorage */,
 				2418CE962A69912B00334EFC /* FirebaseAnalytics */,
 				2418CE982A69912B00334EFC /* FirebaseAnalyticsWithoutAdIdSupport */,
 				2418CE9A2A69912B00334EFC /* FirebaseDatabase */,
@@ -183,7 +158,7 @@
 			);
 			mainGroup = D537A2532A5EF5C000796994;
 			packageReferences = (
-				A8100EC72A69CFCD00A4FDBE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				2418CE952A69912B00334EFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = D537A25D2A5EF5C000796994 /* Products */;
 			projectDirPath = "";
@@ -200,7 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D537A26C2A5EF5C000796994 /* LaunchScreen.storyboard in Resources */,
-				A8100EC62A69B18D00A4FDBE /* GoogleService-Info.plist in Resources */,
+				2418CE942A698F6F00334EFC /* GoogleService-Info.plist in Resources */,
 				D537A2692A5EF5C000796994 /* Assets.xcassets in Resources */,
 				D537A2672A5EF5C000796994 /* Main.storyboard in Resources */,
 				D5AD49C42A6999DA002FCC7E /* bus-icon.png in Resources */,
@@ -214,12 +189,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-				A83AAB872A6EB95C00EC8A3B /* BusStop.swift in Sources */,
-				D537A2642A5EF5C000796994 /* ViewController.swift in Sources */,
-				A83AAB8B2A6EBCE000EC8A3B /* AdminStopsViewController.swift in Sources */,
-				A83AAB892A6EB98A00EC8A3B /* FirebaseManager.swift in Sources */,
-				A83AAB8D2A6ECB6500EC8A3B /* BusStopTableViewCell.swift in Sources */,
 				245A21582A6AF8EC00B8F10A /* NotificationTableViewCell.swift in Sources */,
 				2418CEA12A69ACF100334EFC /* NotificationViewController.swift in Sources */,
 				D537A2642A5EF5C000796994 /* ViewController.swift in Sources */,
@@ -229,8 +198,6 @@
 				D537A2602A5EF5C000796994 /* AppDelegate.swift in Sources */,
 				2418CE9F2A69AAB200334EFC /* NotificationTableViewController.swift in Sources */,
 				D537A2622A5EF5C000796994 /* SceneDelegate.swift in Sources */,
-				A83AAB852A6EB94200EC8A3B /* Route.swift in Sources */,
-				A8100EC42A69B17D00A4FDBE /* MapsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,37 +419,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-
-		A8100EC72A69CFCD00A4FDBE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk?fbclid=IwAR3omqhqGMyKucbxPStdKRlDv1jk8fDuZrPb0vbRVj-Du0xenHvu8z7z7wE";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.0.0;
-
 		2418CE952A69912B00334EFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 9.0.0;
-
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-
-		A8100EC82A69CFCD00A4FDBE /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A8100EC72A69CFCD00A4FDBE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		A8100ECA2A69CFCD00A4FDBE /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A8100EC72A69CFCD00A4FDBE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-
 		2418CE962A69912B00334EFC /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2418CE952A69912B00334EFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -502,7 +449,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2418CE952A69912B00334EFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabaseSwift;
-
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
