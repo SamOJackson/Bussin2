@@ -12,11 +12,7 @@ created database link to Orders table
 Created DatabaseManager class
 Created the OrderViewController and OrderViewContoller view
 
-##Wayne Nguyen Contribution:
-Added map
-Setup Firebase
-Created models for BusStop
-CRUD operation for BusStop
+##Wayne Nyguen Contribution:
 
 
 ##Alexander Gullen Contribution:
