@@ -10,16 +10,17 @@ import Foundation
 import Firebase
 
 class OrdersDatabaseManager {
-    private var databaseReference: DatabaseReference!
-
+    var databaseReference: DatabaseReference!
+    
     init() {
         databaseReference = Database.database().reference()
     }
-
-    func addOrder(name: String, cardNumber: String, total: Double, date: Date) {
+    
+    func addOrder(order: Int, name: String, cardNumber: String, total: Double, date: Date) {
         let orderId = UUID().uuidString
         
         let orderData: [String: Any] = [
+            "Order": order,
             "Name": name,
             "CardNumber": cardNumber,
             "Total": total,
