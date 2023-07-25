@@ -25,7 +25,7 @@
 		D5058BE82A70499B00C7CE79 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5058BE72A70499B00C7CE79 /* OrdersViewController.swift */; };
 		D537A2602A5EF5C000796994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A25F2A5EF5C000796994 /* AppDelegate.swift */; };
 		D537A2622A5EF5C000796994 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A2612A5EF5C000796994 /* SceneDelegate.swift */; };
-		D537A2642A5EF5C000796994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A2632A5EF5C000796994 /* ViewController.swift */; };
+		D537A2642A5EF5C000796994 /* PassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A2632A5EF5C000796994 /* PassesViewController.swift */; };
 		D537A2672A5EF5C000796994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D537A2652A5EF5C000796994 /* Main.storyboard */; };
 		D537A2692A5EF5C000796994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D537A2682A5EF5C000796994 /* Assets.xcassets */; };
 		D537A26C2A5EF5C000796994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D537A26A2A5EF5C000796994 /* LaunchScreen.storyboard */; };
@@ -51,7 +51,7 @@
 		D537A25C2A5EF5C000796994 /* Bussin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bussin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D537A25F2A5EF5C000796994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D537A2612A5EF5C000796994 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D537A2632A5EF5C000796994 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D537A2632A5EF5C000796994 /* PassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassesViewController.swift; sourceTree = "<group>"; };
 		D537A2662A5EF5C000796994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D537A2682A5EF5C000796994 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D537A26B2A5EF5C000796994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -155,6 +155,8 @@
 			);
 			name = Bussin;
 			packageProductDependencies = (
+				2418CE962A69912B00334EFC /* FirebaseAnalytics */,
+				2418CE982A69912B00334EFC /* FirebaseAnalyticsWithoutAdIdSupport */,
 				2418CE9A2A69912B00334EFC /* FirebaseDatabase */,
 				2418CE9C2A69912B00334EFC /* FirebaseDatabaseSwift */,
 			);
@@ -467,6 +469,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2418CE962A69912B00334EFC /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2418CE952A69912B00334EFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		2418CE982A69912B00334EFC /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2418CE952A69912B00334EFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
 		2418CE9A2A69912B00334EFC /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2418CE952A69912B00334EFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

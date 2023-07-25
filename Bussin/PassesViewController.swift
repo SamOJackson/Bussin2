@@ -6,7 +6,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PassesViewController: UIViewController {
     @IBOutlet weak var firstTotal: UILabel!
 
     // Passes
