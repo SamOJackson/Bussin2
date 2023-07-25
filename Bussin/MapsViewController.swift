@@ -13,6 +13,8 @@ class MapsViewController: UIViewController {
     @IBOutlet weak var mapButton: UIButton!
     var tapCount = 0
     @IBOutlet weak var MKMapView: MKMapView!
+    var busStops: [BusStop] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,8 +27,18 @@ class MapsViewController: UIViewController {
                 let tapGesture = UITapGestureRecognizer(target: self, action: #selector(mapButtonTapped))
                 tapGesture.numberOfTapsRequired = 3
                 mapButton.addGestureRecognizer(tapGesture)
+        
+        // Add the bus stops as pins on the map
+                addBusStopsToMap()
     }
-    
+    func addBusStopsToMap() {
+            for busStop in busStops {
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = CLLocationCoordinate2D(latitude: busStop.latitude, longitude: busStop.longitude)
+                annotation.title = busStop.stopName
+                MKMapView.addAnnotation(annotation)
+            }
+        }
 
     @objc func mapButtonTapped(_ sender: UIButton) {
         tapCount += 1
