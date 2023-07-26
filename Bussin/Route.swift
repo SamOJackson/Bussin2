@@ -8,9 +8,9 @@
 import Foundation
 
 struct Route {
-    let routeId: String
-    let routeName: String
-    let stops: [BusStop] // Array of bus stop IDs
+    var routeId: String
+    var routeName: String
+    var stops: [BusStop] // Array of bus stop IDs
     
     // Function to parse the stops array from Firestore data
         static func parseStopsFromFirestore(_ data: [String: Any]) -> [BusStop] {

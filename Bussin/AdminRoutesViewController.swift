@@ -29,17 +29,36 @@ class AdminRoutesViewController: UIViewController {
     }
 
     // Fetch bus routes from Firebase and display them in the table view
-    func fetchBusRoutes() {
+        func fetchBusRoutes() {
             FirebaseManager.shared.fetchBusRoutes { [weak self] busRoutes, error in
                 guard let self = self else { return }
                 if let error = error {
                     print("Error fetching bus routes: \(error.localizedDescription)")
                 } else {
-                    self.busRoutes = busRoutes
-                    self.tableView.reloadData()
+                    // Create a temporary array to store updated routes
+                    var updatedRoutes: [Route] = []
+
+                    // Fetch the corresponding BusStop objects for each route's stopIds
+                    let dispatchGroup = DispatchGroup()
+                    for var route in busRoutes {
+                        dispatchGroup.enter()
+                        FirebaseManager.shared.fetchBusStopsForIds(route.stops.map { $0.stopId }) { busStopsForRoute in
+                            // Update the stops array of the route with the fetched BusStop objects
+                            route.stops = busStopsForRoute // Now this is allowed since 'route' is a variable
+                            updatedRoutes.append(route)
+                            dispatchGroup.leave()
+                        }
+                    }
+
+                    dispatchGroup.notify(queue: .main) {
+                        // All BusStop objects have been fetched and associated with the routes.
+                        self.busRoutes = updatedRoutes
+                        self.tableView.reloadData()
+                    }
                 }
             }
         }
+
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         guard let routeId = routeIdTextField.text, !routeId.isEmpty,
