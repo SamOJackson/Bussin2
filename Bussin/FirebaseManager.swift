@@ -1,8 +1,7 @@
+// FirebaseManager.swift
+// Bussin
 //
-//  FirebaseManager.swift
-//  Bussin
-//
-//  Created by Diem Nguyen on 2023-07-24.
+// Created by Diem Nguyen on 2023-07-24.
 //
 
 import Firebase
@@ -20,13 +19,20 @@ class FirebaseManager {
             "stopId": busStop.stopId,
             "stopName": busStop.stopName,
             "latitude": busStop.latitude,
-            "longitude": busStop.longitude
+            "longitude": busStop.longitude,
+            "schedule": busStop.schedule.map { scheduleItem -> [String: Any] in
+                return [
+                    "dayOfWeek": scheduleItem.dayOfWeek,
+                    "times": scheduleItem.times.joined(separator: ", ") // Convert the array of times to a comma-separated string
+                ]
+            }
         ]
 
         documentRef.setData(data) { error in
             completion(error)
         }
     }
+
 
     // Read bus stops from Firebase Firestore
     static func fetchBusStops(completion: @escaping ([BusStop]?, Error?) -> Void) {
@@ -44,7 +50,20 @@ class FirebaseManager {
                 let stopName = busStopData["stopName"] as? String ?? ""
                 let latitude = busStopData["latitude"] as? Double ?? 0.0
                 let longitude = busStopData["longitude"] as? Double ?? 0.0
-                let busStop = BusStop(stopId: stopId, stopName: stopName, latitude: latitude, longitude: longitude)
+
+                // Parse the schedule data
+                let scheduleData = busStopData["schedule"] as? [[String: Any]] ?? []
+                var schedule: [ScheduleItem] = []
+                for itemData in scheduleData {
+                    if let dayOfWeek = itemData["dayOfWeek"] as? String,
+                       let timesString = itemData["times"] as? String {
+                        let times = timesString.split(separator: ",").map { String($0.trimmingCharacters(in: .whitespaces)) }
+                        let scheduleItem = ScheduleItem(dayOfWeek: dayOfWeek, times: times)
+                        schedule.append(scheduleItem)
+                    }
+                }
+
+                let busStop = BusStop(stopId: stopId, stopName: stopName, latitude: latitude, longitude: longitude, schedule: schedule)
                 busStops.append(busStop)
             }
 
@@ -61,7 +80,13 @@ class FirebaseManager {
             "stopId": busStop.stopId,
             "stopName": busStop.stopName,
             "latitude": busStop.latitude,
-            "longitude": busStop.longitude
+            "longitude": busStop.longitude,
+            "schedule": busStop.schedule.map { scheduleItem -> [String: Any] in
+                return [
+                    "dayOfWeek": scheduleItem.dayOfWeek,
+                    "times": scheduleItem.times.joined(separator: ", ") // Convert the array of times to a comma-separated string
+                ]
+            }
         ]
 
         documentRef.setData(data) { error in
@@ -78,7 +103,7 @@ class FirebaseManager {
             completion(error)
         }
     }
-    
+
     //  CRUD FOR ROUTES
     // Singleton instance for BusRouteController
     static let shared = FirebaseManager()
@@ -88,15 +113,10 @@ class FirebaseManager {
 
     // Collection name for bus routes in Firestore
     let busRoutesCollection = "busRoutes"
-    
+
     // Function to fetch the BusStop objects corresponding to given stopIds
     func fetchBusStopsForIds(_ stopIds: [String], completion: @escaping ([BusStop]) -> Void) {
-        // Implement the logic to fetch BusStop objects for the given stopIds
-        // For example, you can query your Firestore collection for the BusStop objects with matching stopIds.
-        // Assuming you have a function that fetches bus stops for given stopIds asynchronously.
-
         // Fetch bus stops based on stopIds asynchronously and call the completion handler when done.
-        // Sample code (replace this with your actual implementation):
         var fetchedBusStops: [BusStop] = []
 
         let dispatchGroup = DispatchGroup()
@@ -112,8 +132,20 @@ class FirebaseManager {
                     let latitude = busStopData["latitude"] as? Double ?? 0.0
                     let longitude = busStopData["longitude"] as? Double ?? 0.0
 
-                    // Create a BusStop object
-                    let busStop = BusStop(stopId: stopId, stopName: stopName, latitude: latitude, longitude: longitude)
+                    // Parse the schedule data
+                    let scheduleData = busStopData["schedule"] as? [[String: Any]] ?? []
+                    var schedule: [ScheduleItem] = []
+                    for itemData in scheduleData {
+                        if let dayOfWeek = itemData["dayOfWeek"] as? String,
+                           let timesString = itemData["times"] as? String {
+                            let times = timesString.split(separator: ",").map { String($0.trimmingCharacters(in: .whitespaces)) }
+                            let scheduleItem = ScheduleItem(dayOfWeek: dayOfWeek, times: times)
+                            schedule.append(scheduleItem)
+                        }
+                    }
+
+                    // Create a BusStop object with schedule
+                    let busStop = BusStop(stopId: stopId, stopName: stopName, latitude: latitude, longitude: longitude, schedule: schedule)
                     fetchedBusStops.append(busStop)
                 }
 
@@ -126,7 +158,6 @@ class FirebaseManager {
             completion(fetchedBusStops)
         }
     }
-
 
     // Function to create a new bus route in Firestore
     func createBusRoute(routeId: String, routeName: String, stopIds: [String], completion: @escaping (Error?) -> Void) {
@@ -151,34 +182,33 @@ class FirebaseManager {
     }
 
     // Function to fetch all bus routes from Firestore
-        func fetchBusRoutes(completion: @escaping ([Route], Error?) -> Void) {
-            var busRoutes: [Route] = []
+    func fetchBusRoutes(completion: @escaping ([Route], Error?) -> Void) {
+        var busRoutes: [Route] = []
 
-            // Assuming you have a "busRoutes" collection in your Firestore database
-            db.collection(busRoutesCollection).getDocuments { (querySnapshot, error) in
-                if let error = error {
-                    print("Error fetching bus routes: \(error)")
-                    completion(busRoutes, error)
-                    return
-                }
-
-                for document in querySnapshot!.documents {
-                                let data = document.data()
-
-                                if let routeId = data["routeId"] as? String,
-                                   let routeName = data["routeName"] as? String {
-                                    // Parse the stops array from Firestore data
-                                    let stops = Route.parseStopsFromFirestore(data)
-
-                                    let route = Route(routeId: routeId, routeName: routeName, stops: stops)
-                                    busRoutes.append(route)
-                                }
-                            }
-
-                completion(busRoutes, nil)
+        // Assuming you have a "busRoutes" collection in your Firestore database
+        db.collection(busRoutesCollection).getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Error fetching bus routes: \(error)")
+                completion(busRoutes, error)
+                return
             }
-        }
 
+            for document in querySnapshot!.documents {
+                let data = document.data()
+
+                if let routeId = data["routeId"] as? String,
+                   let routeName = data["routeName"] as? String {
+                    // Parse the stops array from Firestore data
+                    let stops = Route.parseStopsFromFirestore(data)
+
+                    let route = Route(routeId: routeId, routeName: routeName, stops: stops)
+                    busRoutes.append(route)
+                }
+            }
+
+            completion(busRoutes, nil)
+        }
+    }
 
     // Function to update an existing bus route in Firestore
     func updateBusRoute(routeId: String, routeName: String, stopIds: [String], completion: @escaping (Error?) -> Void) {
@@ -202,11 +232,11 @@ class FirebaseManager {
         }
     }
 
-        // Function to delete an existing bus route from Firestore
-        func deleteBusRoute(routeId: String, completion: @escaping (Error?) -> Void) {
-            // Assuming you have a "busRoutes" collection in your Firestore database
-            db.collection(busRoutesCollection).document(routeId).delete { error in
-                completion(error)
-            }
+    // Function to delete an existing bus route from Firestore
+    func deleteBusRoute(routeId: String, completion: @escaping (Error?) -> Void) {
+        // Assuming you have a "busRoutes" collection in your Firestore database
+        db.collection(busRoutesCollection).document(routeId).delete { error in
+            completion(error)
         }
+    }
 }

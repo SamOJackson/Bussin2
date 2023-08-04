@@ -55,14 +55,20 @@ class MapsViewController: UIViewController {
             }
         }
 
-        func addBusStopsToMap() {
-            for busStop in busStops {
-                let annotation = MKPointAnnotation()
-                annotation.coordinate = CLLocationCoordinate2D(latitude: busStop.latitude, longitude: busStop.longitude)
-                annotation.title = busStop.stopName
-                MKMapView.addAnnotation(annotation)
+    func addBusStopsToMap() {
+        for busStop in busStops {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: busStop.latitude, longitude: busStop.longitude)
+            annotation.title = busStop.stopName
+            MKMapView.addAnnotation(annotation)
+
+            // Make the annotation view user-interactable
+            if let annotationView = MKMapView.view(for: annotation) {
+                annotationView.isUserInteractionEnabled = true
             }
         }
+    }
+
     var adminPage: String = ""
 
     @objc func routesButtonTapped(_ sender: UIButton) {
@@ -116,7 +122,7 @@ class MapsViewController: UIViewController {
             }
 
             // Assuming you want to display the first bus route for now
-            if let firstBusRoute = busRoutes.first {
+            if let firstBusRoute = busRoutes.first, firstBusRoute.stops.count >= 2 {
                 let stops = firstBusRoute.stops
                 let stopCoordinates = stops.map { CLLocationCoordinate2D(latitude: $0.latitude, longitude: $0.longitude) }
 
@@ -134,6 +140,7 @@ class MapsViewController: UIViewController {
             }
         }
     }
+
 
     // Function to calculate the route between each pair of consecutive bus stops using MapKit Directions API
     func calculateRoutesBetweenStops(coordinates: [CLLocationCoordinate2D], completion: @escaping ([MKRoute]?, Error?) -> Void) {
@@ -169,7 +176,32 @@ class MapsViewController: UIViewController {
         func drawBusRoute(_ route: MKRoute) {
             MKMapView.addOverlay(route.polyline)
         }
+    // Function to handle the tap on a pin/bus stop
+        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            guard let selectedAnnotation = view.annotation as? MKPointAnnotation else {
+                return
+            }
+            
+            // Find the corresponding bus stop from the selectedAnnotation's title
+            if let selectedBusStop = busStops.first(where: { $0.stopName == selectedAnnotation.title }) {
+                performSegue(withIdentifier: "showBusStopDetails", sender: selectedBusStop)
+            }
+            
+            // Deselect the pin so that it can be selected again
+            mapView.deselectAnnotation(selectedAnnotation, animated: true)
+        }
     
+    // Prepare for the segue in MapsViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showBusStopDetails",
+           let destinationVC = segue.destination as? BusStopDetailsViewController,
+           let selectedBusStop = sender as? BusStop {
+            print("Selected Bus Stop: \(selectedBusStop.stopName)")
+            destinationVC.selectedBusStop = selectedBusStop
+        }
+    }
+
+
 
 }
 
