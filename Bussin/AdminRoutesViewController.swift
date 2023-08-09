@@ -2,7 +2,7 @@
 //  AdminRoutesViewController.swift
 //  Bussin
 //
-//  Created by Diem Nguyen on 2023-07-25.
+//  Created by Wayne Nguyen on 2023-07-25.
 //
 
 import UIKit
@@ -155,5 +155,30 @@ extension AdminRoutesViewController: UITableViewDelegate, UITableViewDataSource 
         // Return the calculated height.
         return totalHeight
     }
+    // Swipe to delete functionality
+        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                let routeToDelete = busRoutes[indexPath.row]
+                deleteBusRoute(route: routeToDelete, at: indexPath)
+            }
+        }
+    
+    // Function to delete a bus route and update the table view
+    func deleteBusRoute(route: Route, at indexPath: IndexPath) {
+        FirebaseManager.shared.deleteBusRoute(routeId: route.routeId) { [weak self] error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                print("Error deleting bus route: \(error.localizedDescription)")
+            } else {
+                print("Bus route deleted successfully!")
+                // Remove the route from the local busRoutes array and update the table view
+                self.busRoutes.remove(at: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        }
+    }
+    
+    
 
 }

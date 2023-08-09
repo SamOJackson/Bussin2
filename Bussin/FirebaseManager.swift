@@ -1,7 +1,7 @@
 // FirebaseManager.swift
 // Bussin
 //
-// Created by Diem Nguyen on 2023-07-24.
+// Created by Wayne Nguyen on 2023-07-24.
 //
 
 import Firebase

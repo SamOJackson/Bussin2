@@ -2,7 +2,7 @@
 //  RouteListViewController.swift
 //  Bussin
 //
-//  Created by Diem Nguyen on 2023-08-07.
+//  Created by Wayne Nguyen on 2023-08-07.
 //
 
 

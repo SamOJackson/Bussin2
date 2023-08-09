@@ -2,7 +2,7 @@
 //  MapsViewController.swift
 //  Bussin
 //
-//  Created by Diem Nguyen on 2023-07-20.
+//  Created by Wayne Nguyen on 2023-07-20.
 //
 
 import UIKit

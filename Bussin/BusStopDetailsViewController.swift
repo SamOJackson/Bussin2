@@ -2,7 +2,7 @@
 //  BusStopDetailsViewController.swift
 //  Bussin
 //
-//  Created by Diem Nguyen on 2023-08-04.
+//  Created by Wayne Nguyen on 2023-08-04.
 //
 
 import UIKit
