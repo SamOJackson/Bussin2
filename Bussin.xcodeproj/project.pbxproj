@@ -24,6 +24,8 @@
 		A83AAB8D2A6ECB6500EC8A3B /* BusStopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB8C2A6ECB6500EC8A3B /* BusStopTableViewCell.swift */; };
 		A83AAB902A6EDFBF00EC8A3B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A83AAB8F2A6EDFBF00EC8A3B /* FirebaseFirestore */; };
 		A83AAB922A6EDFC700EC8A3B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A83AAB912A6EDFC700EC8A3B /* FirebaseStorage */; };
+		A84080052A8152C9007B0118 /* RouteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84080042A8152C9007B0118 /* RouteListViewController.swift */; };
+		A84080072A815345007B0118 /* RouteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84080062A815345007B0118 /* RouteDetailViewController.swift */; };
 		A8F32B082A7D939E0079BACA /* BusStopDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F32B072A7D939E0079BACA /* BusStopDetailsViewController.swift */; };
 		D537A2602A5EF5C000796994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A25F2A5EF5C000796994 /* AppDelegate.swift */; };
 		D537A2622A5EF5C000796994 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A2612A5EF5C000796994 /* SceneDelegate.swift */; };
@@ -51,6 +53,8 @@
 		A83AAB882A6EB98A00EC8A3B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		A83AAB8A2A6EBCE000EC8A3B /* AdminStopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminStopsViewController.swift; sourceTree = "<group>"; };
 		A83AAB8C2A6ECB6500EC8A3B /* BusStopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopTableViewCell.swift; sourceTree = "<group>"; };
+		A84080042A8152C9007B0118 /* RouteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListViewController.swift; sourceTree = "<group>"; };
+		A84080062A815345007B0118 /* RouteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailViewController.swift; sourceTree = "<group>"; };
 		A8F32B072A7D939E0079BACA /* BusStopDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopDetailsViewController.swift; sourceTree = "<group>"; };
 		D537A25C2A5EF5C000796994 /* Bussin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bussin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D537A25F2A5EF5C000796994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 				A813D9662A70A8C9000CEC5A /* AdminRoutesViewController.swift */,
 				A813D9682A70AD0E000CEC5A /* RouteTableViewCell.swift */,
 				A8F32B072A7D939E0079BACA /* BusStopDetailsViewController.swift */,
+				A84080042A8152C9007B0118 /* RouteListViewController.swift */,
+				A84080062A815345007B0118 /* RouteDetailViewController.swift */,
 			);
 			path = Bussin;
 			sourceTree = "<group>";
@@ -234,6 +240,7 @@
 				245A215A2A6B0CF400B8F10A /* Notification.swift in Sources */,
 				A83AAB872A6EB95C00EC8A3B /* BusStop.swift in Sources */,
 				D537A2642A5EF5C000796994 /* ViewController.swift in Sources */,
+				A84080072A815345007B0118 /* RouteDetailViewController.swift in Sources */,
 				A83AAB8B2A6EBCE000EC8A3B /* AdminStopsViewController.swift in Sources */,
 				A83AAB892A6EB98A00EC8A3B /* FirebaseManager.swift in Sources */,
 				A83AAB8D2A6ECB6500EC8A3B /* BusStopTableViewCell.swift in Sources */,
@@ -242,6 +249,7 @@
 				D537A2622A5EF5C000796994 /* SceneDelegate.swift in Sources */,
 				A83AAB852A6EB94200EC8A3B /* Route.swift in Sources */,
 				A813D9672A70A8CA000CEC5A /* AdminRoutesViewController.swift in Sources */,
+				A84080052A8152C9007B0118 /* RouteListViewController.swift in Sources */,
 				A8100EC42A69B17D00A4FDBE /* MapsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

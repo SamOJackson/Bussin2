@@ -38,6 +38,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Routes"/>
                                 <connections>
                                     <action selector="routesButtonTapped:" destination="Gqm-1F-cmc" eventType="touchUpInside" id="Oh3-JM-WXI"/>
+                                    <segue destination="639-2f-O7n" kind="showDetail" identifier="showRouteList" id="FIn-kZ-Vuj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaw-78-Urn">
@@ -84,6 +85,7 @@
                     <connections>
                         <outlet property="MKMapView" destination="siT-PB-1rt" id="WMp-ag-BeQ"/>
                         <outlet property="mapButton" destination="9Ld-6g-01D" id="Neg-Sl-Zdz"/>
+                        <outlet property="routeButton" destination="gtX-f7-rtA" id="OaX-Pm-Hh5"/>
                         <segue destination="ka0-s7-4VF" kind="showDetail" identifier="showBusStopDetails" id="NLd-hY-39A"/>
                     </connections>
                 </viewController>
@@ -190,6 +192,140 @@
             </objects>
             <point key="canvasLocation" x="113.74045801526717" y="7.746478873239437"/>
         </scene>
+        <!--Route List View Controller-->
+        <scene sceneID="vgF-ht-pDo">
+            <objects>
+                <viewController id="639-2f-O7n" customClass="RouteListViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dQf-v4-URD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List of Routes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAM-VC-yix">
+                                <rect key="frame" x="112" y="73" width="169" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lMo-IC-VrZ">
+                                <rect key="frame" x="46" y="121" width="300" height="585"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RouteCell" rowHeight="157" id="Aer-eF-GGq" customClass="RouteTableViewCell" customModule="Bussin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="300" height="157"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Aer-eF-GGq" id="YJn-MB-tdu">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="157"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mz-IJ-FI9">
+                                                    <rect key="frame" x="16" y="11" width="152" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StopIds" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKZ-ek-O32">
+                                                    <rect key="frame" x="16" y="59" width="268" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FU-3e-Ez1">
+                                                    <rect key="frame" x="16" y="35" width="268" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="routeIdLabel" destination="9Mz-IJ-FI9" id="Ks0-Ym-sUa"/>
+                                            <outlet property="routeNameLabel" destination="0FU-3e-Ez1" id="1x4-Sh-ZwU"/>
+                                            <outlet property="routeStopIdsLabel" destination="xKZ-ek-O32" id="DME-ZP-U05"/>
+                                            <segue destination="Cb8-i8-ph8" kind="showDetail" identifier="showRouteDetail" id="Szf-qj-3Tg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYj-9b-nAL">
+                                <rect key="frame" x="46" y="714" width="62" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="639-2f-O7n" eventType="touchUpInside" id="ncm-Oq-0KQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gjP-pk-yix"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x8B-pL-cI9"/>
+                    <connections>
+                        <outlet property="tableView" destination="lMo-IC-VrZ" id="aLG-hR-256"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pN1-40-mIL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-532.06106870229007" y="776.76056338028172"/>
+        </scene>
+        <!--Route Detail View Controller-->
+        <scene sceneID="Gbj-Bu-FA4">
+            <objects>
+                <viewController id="Cb8-i8-ph8" customClass="RouteDetailViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nh5-K0-A5o">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Route Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pS-eR-br4">
+                                <rect key="frame" x="117" y="79" width="159" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DY-oH-eBX">
+                                <rect key="frame" x="43" y="731" width="62" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="Cb8-i8-ph8" eventType="touchUpInside" id="QWL-DV-ENl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Route Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbW-DC-pzb">
+                                <rect key="frame" x="43" y="145" width="307" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Bus Route Details" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iTo-AY-3S3">
+                                <rect key="frame" x="76" y="204" width="240" height="356"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g4l-yX-CKV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Wd-sa-M37"/>
+                    <connections>
+                        <outlet property="busStopsTextView" destination="iTo-AY-3S3" id="UXO-Lu-vnA"/>
+                        <outlet property="routeNameLabel" destination="rbW-DC-pzb" id="uo4-mX-s7N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSS-6z-OoD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="209.92366412213741" y="776.76056338028172"/>
+        </scene>
         <!--Bus Stop Details View Controller-->
         <scene sceneID="ZLE-We-VOB">
             <objects>
@@ -261,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3TS-SX-0XR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1338.1679389312976" y="700.70422535211276"/>
+            <point key="canvasLocation" x="-1338" y="777"/>
         </scene>
         <!--Admin Stops View Controller-->
         <scene sceneID="sXB-RL-QmK">
@@ -400,7 +536,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wGS-yE-nkj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-532.06106870229007" y="701.4084507042254"/>
+            <point key="canvasLocation" x="-1338" y="8"/>
         </scene>
         <!--Passes-->
         <scene sceneID="NtB-6d-mKj">
@@ -548,7 +684,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fQ-Io-U9P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1380.9160305343512" y="7.746478873239437"/>
+            <point key="canvasLocation" x="1682" y="8"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="8FJ-Vv-J5f">
@@ -677,7 +813,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHD-rV-5xM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748.85496183206101" y="7.746478873239437"/>
+            <point key="canvasLocation" x="868" y="8"/>
         </scene>
         <!-- Payment-->
         <scene sceneID="VBR-t4-ybu">
@@ -786,7 +922,7 @@ CFBheW1lbnQ
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZH-Lx-4Ta" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2053" y="8"/>
+            <point key="canvasLocation" x="2418" y="23"/>
         </scene>
         <!--Admin Routes View Controller-->
         <scene sceneID="RMQ-Bd-cC9">
@@ -896,7 +1032,7 @@ CFBheW1lbnQ
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQ9-Vy-PR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159.54198473282443" y="700.70422535211276"/>
+            <point key="canvasLocation" x="-2060" y="8"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

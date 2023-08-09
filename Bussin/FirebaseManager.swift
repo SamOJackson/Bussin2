@@ -158,6 +158,47 @@ class FirebaseManager {
             completion(fetchedBusStops)
         }
     }
+    
+    // Function to fetch a single bus stop by its ID
+    func fetchBusStop(byId stopId: String, completion: @escaping (BusStop?, Error?) -> Void) {
+        let stopRef = db.collection("BusStops").document(stopId)
+        
+        stopRef.getDocument { (document, error) in
+            if let error = error {
+                print("Error fetching bus stop: \(error)")
+                completion(nil, error)
+                return
+            }
+            
+            if let document = document, document.exists {
+                if let stopData = document.data(),
+                   let stopName = stopData["stopName"] as? String,
+                   let latitude = stopData["latitude"] as? Double,
+                   let longitude = stopData["longitude"] as? Double,
+                   let scheduleData = stopData["schedule"] as? [[String: Any]] {
+                    
+                    var schedule: [ScheduleItem] = []
+                    for itemData in scheduleData {
+                        if let dayOfWeek = itemData["dayOfWeek"] as? String,
+                           let timesString = itemData["times"] as? String {
+                            let times = timesString.split(separator: ",").map { String($0.trimmingCharacters(in: .whitespaces)) }
+                            let scheduleItem = ScheduleItem(dayOfWeek: dayOfWeek, times: times)
+                            schedule.append(scheduleItem)
+                        }
+                    }
+                    
+                    let busStop = BusStop(stopId: stopId, stopName: stopName, latitude: latitude, longitude: longitude, schedule: schedule)
+                    completion(busStop, nil)
+                } else {
+                    // Stop data is not properly formatted
+                    completion(nil, NSError(domain: "FetchStopError", code: 0, userInfo: nil))
+                }
+            } else {
+                // Stop not found or document doesn't exist
+                completion(nil, NSError(domain: "StopNotFound", code: 1, userInfo: nil))
+            }
+        }
+    }
 
     // Function to create a new bus route in Firestore
     func createBusRoute(routeId: String, routeName: String, stopIds: [String], completion: @escaping (Error?) -> Void) {
@@ -230,6 +271,90 @@ class FirebaseManager {
                 completion(error)
             }
         }
+    }
+    // Function to fetch a single bus route by its ID
+    func fetchBusRoute(byId routeId: String, completion: @escaping (Route?, Error?) -> Void) {
+        let routeRef = db.collection(busRoutesCollection).document(routeId)
+        
+        routeRef.getDocument { (document, error) in
+            if let error = error {
+                print("Error fetching bus route: \(error)")
+                completion(nil, error)
+                return
+            }
+            
+            if let document = document, document.exists {
+                if let routeData = document.data(),
+                   let routeName = routeData["routeName"] as? String,
+                   let stopsData = routeData["stops"] as? [[String: Any]] {
+                    
+                    var stops: [BusStop] = []
+                    let dispatchGroup = DispatchGroup()
+                    
+                    for stopData in stopsData {
+                        dispatchGroup.enter()
+                        
+                        if let stopId = stopData["stopId"] as? String {
+                            self.fetchBusStop(byId: stopId) { busStop, error in
+                                if let busStop = busStop {
+                                    stops.append(busStop)
+                                }
+                                dispatchGroup.leave()
+                            }
+                        } else {
+                            // Stop ID not found in data
+                            dispatchGroup.leave()
+                        }
+                    }
+                    
+                    dispatchGroup.notify(queue: .main) {
+                        let route = Route(routeId: routeId, routeName: routeName, stops: stops)
+                        completion(route, nil)
+                    }
+                } else {
+                    // Route data is not properly formatted
+                    completion(nil, NSError(domain: "FetchRouteError", code: 0, userInfo: nil))
+                }
+            } else {
+                // Route not found or document doesn't exist
+                completion(nil, NSError(domain: "RouteNotFound", code: 1, userInfo: nil))
+            }
+        }
+    }
+    static func parseStopsFromFirestore(_ data: [String: Any]) -> [BusStop] {
+        guard let stopsData = data["stops"] as? [[String: Any]] else {
+            return []
+        }
+
+        var stops: [BusStop] = []
+        for stopData in stopsData {
+            if let stopId = stopData["stopId"] as? String,
+               let stopName = stopData["stopName"] as? String,
+               let latitude = stopData["latitude"] as? Double,
+               let longitude = stopData["longitude"] as? Double,
+               let scheduleData = stopData["schedule"] as? [[String: Any]] {
+
+                var schedule: [ScheduleItem] = []
+                for itemData in scheduleData {
+                    if let dayOfWeek = itemData["dayOfWeek"] as? String,
+                       let timesString = itemData["times"] as? String {
+                        
+                        let times = timesString.split(separator: ",").map { String($0.trimmingCharacters(in: .whitespaces)) }
+                        let scheduleItem = ScheduleItem(dayOfWeek: dayOfWeek, times: times)
+                        schedule.append(scheduleItem)
+                    }
+                }
+
+
+                let stop = BusStop(stopId: stopId, stopName: stopName, latitude: latitude, longitude: longitude, schedule: schedule)
+                stops.append(stop)
+            }
+        }
+
+        // Print stops array for debugging
+        print("Stops Array: \(stops)")
+
+        return stops
     }
 
     // Function to delete an existing bus route from Firestore

@@ -12,9 +12,12 @@ import FirebaseFirestore
 class MapsViewController: UIViewController {
 //
     @IBOutlet weak var mapButton: UIButton!
-    var tapCount = 0
+    @IBOutlet weak var routeButton: UIButton!
     @IBOutlet weak var MKMapView: MKMapView!
     var busStops: [BusStop] = []
+    var tapCount = 0
+    var isWaitingForTripleTap = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +27,11 @@ class MapsViewController: UIViewController {
         let region = MKCoordinateRegion(center: barrieLocation, latitudinalMeters: 5000, longitudinalMeters: 5000)
         MKMapView.setRegion(region, animated: true)
         
-        // Set up the tap gesture recognizer for the admin button
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(mapButtonTapped))
-        tapGesture.numberOfTapsRequired = 3
-        mapButton.addGestureRecognizer(tapGesture)
+        // Set up the tap gesture recognizer for the routesButton
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(routesButtonTapped))
+            tapGesture.numberOfTapsRequired = 3
+            mapButton.addGestureRecognizer(tapGesture)
+        routeButton.addGestureRecognizer(tapGesture)
         
         // Set the MKMapView delegate
         MKMapView.delegate = self
@@ -71,16 +75,20 @@ class MapsViewController: UIViewController {
 
     var adminPage: String = ""
 
-    @objc func routesButtonTapped(_ sender: UIButton) {
-        adminPage = "routes"
-        tapCount += 1
+    @objc func routesButtonTapped(_ sender: UITapGestureRecognizer) {
+        if sender.state == .recognized {
+                adminPage = "routes"
+                tapCount += 1
 
-        // Check if the admin button is tapped three times
-        if tapCount == 3 {
-            openAdminInterface()
-            // Reset the tap count to 0
-            tapCount = 0
-        }
+                // Check if the admin button is tapped three times
+                if tapCount == 3 {
+                    openAdminInterface()
+                    // Reset the tap count to 0
+                    tapCount = 0
+                } else if tapCount == 1 {
+                    performSegue(withIdentifier: "showRouteList", sender: self)
+                }
+            }
     }
 
     @objc func mapButtonTapped(_ sender: UIButton) {
