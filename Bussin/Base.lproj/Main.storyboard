@@ -404,7 +404,7 @@
             <objects>
                 <viewController id="wqo-bl-BaC" userLabel="Order" customClass="OrderViewController" customModule="Bussin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bS9-hW-EQz">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMN-9E-qaF" customClass="titleLabel">
@@ -484,7 +484,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAz-5v-CbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2715" y="8"/>
+            <point key="canvasLocation" x="1713" y="-1073"/>
         </scene>
         <!--Admin Stops View Controller-->
         <scene sceneID="sXB-RL-QmK">
@@ -744,6 +744,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okj-tJ-zph">
+                                <rect key="frame" x="300" y="586" width="77" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Orders"/>
+                                <connections>
+                                    <segue destination="wqo-bl-BaC" kind="presentation" id="LY8-Vr-2oi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3W3-t1-VaY"/>
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
@@ -771,7 +780,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fQ-Io-U9P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1682" y="8"/>
+            <point key="canvasLocation" x="981" y="-1054"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="8FJ-Vv-J5f">
@@ -993,6 +1002,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Orders"/>
+                                <connections>
+                                    <segue destination="wqo-bl-BaC" kind="presentation" id="x2f-fT-eOA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ekq-6W-ooC"/>
@@ -1212,10 +1224,12 @@ CFBheW1lbnQ
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cQf-J1-rFQ"/>
-        <segue reference="NdW-L8-SLH"/>
-        <segue reference="1dO-hM-VFX"/>
-        <segue reference="lxo-JD-zFo"/>
+        <segue reference="otU-JG-eSo"/>
+        <segue reference="d4C-38-Ubc"/>
+        <segue reference="Bia-8i-p7H"/>
+        <segue reference="LY8-Vr-2oi"/>
+        <segue reference="JhS-zI-cT6"/>
+        <segue reference="pma-cp-wGT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
