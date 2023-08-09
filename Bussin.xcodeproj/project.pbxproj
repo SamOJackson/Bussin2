@@ -14,7 +14,12 @@
 		2418CEA12A69ACF100334EFC /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2418CEA02A69ACF100334EFC /* NotificationViewController.swift */; };
 		245A21582A6AF8EC00B8F10A /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A21572A6AF8EC00B8F10A /* NotificationTableViewCell.swift */; };
 		245A215A2A6B0CF400B8F10A /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A21592A6B0CF400B8F10A /* Notification.swift */; };
+		24EF74F12A844DC100698921 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2418CE962A69912B00334EFC /* FirebaseAnalytics */; };
+		24EF74F22A844DC100698921 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 2418CE982A69912B00334EFC /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		24EF74F42A8450B700698921 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EF74F32A8450B700698921 /* ScheduleItem.swift */; };
 		A8100EC42A69B17D00A4FDBE /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8100EC32A69B17D00A4FDBE /* MapsViewController.swift */; };
+		A813D9672A70A8CA000CEC5A /* AdminRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A813D9662A70A8C9000CEC5A /* AdminRoutesViewController.swift */; };
+		A813D9692A70AD0E000CEC5A /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A813D9682A70AD0E000CEC5A /* RouteTableViewCell.swift */; };
 		A83AAB852A6EB94200EC8A3B /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB842A6EB94200EC8A3B /* Route.swift */; };
 		A83AAB872A6EB95C00EC8A3B /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB862A6EB95C00EC8A3B /* BusStop.swift */; };
 		A83AAB892A6EB98A00EC8A3B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB882A6EB98A00EC8A3B /* FirebaseManager.swift */; };
@@ -22,10 +27,13 @@
 		A83AAB8D2A6ECB6500EC8A3B /* BusStopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83AAB8C2A6ECB6500EC8A3B /* BusStopTableViewCell.swift */; };
 		A83AAB902A6EDFBF00EC8A3B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A83AAB8F2A6EDFBF00EC8A3B /* FirebaseFirestore */; };
 		A83AAB922A6EDFC700EC8A3B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A83AAB912A6EDFC700EC8A3B /* FirebaseStorage */; };
+		A84080052A8152C9007B0118 /* RouteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84080042A8152C9007B0118 /* RouteListViewController.swift */; };
+		A84080072A815345007B0118 /* RouteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84080062A815345007B0118 /* RouteDetailViewController.swift */; };
+		A8F32B082A7D939E0079BACA /* BusStopDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F32B072A7D939E0079BACA /* BusStopDetailsViewController.swift */; };
 		D5058BE82A70499B00C7CE79 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5058BE72A70499B00C7CE79 /* OrdersViewController.swift */; };
 		D537A2602A5EF5C000796994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A25F2A5EF5C000796994 /* AppDelegate.swift */; };
 		D537A2622A5EF5C000796994 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A2612A5EF5C000796994 /* SceneDelegate.swift */; };
-		D537A2642A5EF5C000796994 /* PassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A2632A5EF5C000796994 /* PassesViewController.swift */; };
+		D537A2642A5EF5C000796994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D537A2632A5EF5C000796994 /* ViewController.swift */; };
 		D537A2672A5EF5C000796994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D537A2652A5EF5C000796994 /* Main.storyboard */; };
 		D537A2692A5EF5C000796994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D537A2682A5EF5C000796994 /* Assets.xcassets */; };
 		D537A26C2A5EF5C000796994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D537A26A2A5EF5C000796994 /* LaunchScreen.storyboard */; };
@@ -40,18 +48,24 @@
 		2418CEA02A69ACF100334EFC /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		245A21572A6AF8EC00B8F10A /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		245A21592A6B0CF400B8F10A /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		24EF74F32A8450B700698921 /* ScheduleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScheduleItem.swift; path = Bussin/Models/ScheduleItem.swift; sourceTree = SOURCE_ROOT; };
 		A8100EC32A69B17D00A4FDBE /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		A8100EC52A69B18C00A4FDBE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A813D9662A70A8C9000CEC5A /* AdminRoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRoutesViewController.swift; sourceTree = "<group>"; };
+		A813D9682A70AD0E000CEC5A /* RouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTableViewCell.swift; sourceTree = "<group>"; };
 		A83AAB842A6EB94200EC8A3B /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		A83AAB862A6EB95C00EC8A3B /* BusStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
 		A83AAB882A6EB98A00EC8A3B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		A83AAB8A2A6EBCE000EC8A3B /* AdminStopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminStopsViewController.swift; sourceTree = "<group>"; };
 		A83AAB8C2A6ECB6500EC8A3B /* BusStopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopTableViewCell.swift; sourceTree = "<group>"; };
+		A84080042A8152C9007B0118 /* RouteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListViewController.swift; sourceTree = "<group>"; };
+		A84080062A815345007B0118 /* RouteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailViewController.swift; sourceTree = "<group>"; };
+		A8F32B072A7D939E0079BACA /* BusStopDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopDetailsViewController.swift; sourceTree = "<group>"; };
 		D5058BE72A70499B00C7CE79 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		D537A25C2A5EF5C000796994 /* Bussin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bussin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D537A25F2A5EF5C000796994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D537A2612A5EF5C000796994 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D537A2632A5EF5C000796994 /* PassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassesViewController.swift; sourceTree = "<group>"; };
+		D537A2632A5EF5C000796994 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D537A2662A5EF5C000796994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D537A2682A5EF5C000796994 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D537A26B2A5EF5C000796994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24EF74F22A844DC100698921 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				24EF74F12A844DC100698921 /* FirebaseAnalytics in Frameworks */,
 				2418CE9D2A69912B00334EFC /* FirebaseDatabaseSwift in Frameworks */,
 				2418CE9B2A69912B00334EFC /* FirebaseDatabase in Frameworks */,
 				A83AAB902A6EDFBF00EC8A3B /* FirebaseFirestore in Frameworks */,
@@ -80,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				245A21592A6B0CF400B8F10A /* Notification.swift */,
+				24EF74F32A8450B700698921 /* ScheduleItem.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -134,6 +151,11 @@
 				A83AAB882A6EB98A00EC8A3B /* FirebaseManager.swift */,
 				A83AAB8A2A6EBCE000EC8A3B /* AdminStopsViewController.swift */,
 				A83AAB8C2A6ECB6500EC8A3B /* BusStopTableViewCell.swift */,
+				A813D9662A70A8C9000CEC5A /* AdminRoutesViewController.swift */,
+				A813D9682A70AD0E000CEC5A /* RouteTableViewCell.swift */,
+				A8F32B072A7D939E0079BACA /* BusStopDetailsViewController.swift */,
+				A84080042A8152C9007B0118 /* RouteListViewController.swift */,
+				A84080062A815345007B0118 /* RouteDetailViewController.swift */,
 			);
 			path = Bussin;
 			sourceTree = "<group>";
@@ -221,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				245A21582A6AF8EC00B8F10A /* NotificationTableViewCell.swift in Sources */,
+				A813D9692A70AD0E000CEC5A /* RouteTableViewCell.swift in Sources */,
 				2418CEA12A69ACF100334EFC /* NotificationViewController.swift in Sources */,
 				D537A2642A5EF5C000796994 /* ViewController.swift in Sources */,
 				D538B46D2A69BDB60066205C /* OrdersDatabaseManager.swift in Sources */,
@@ -228,6 +251,12 @@
 				245A215A2A6B0CF400B8F10A /* Notification.swift in Sources */,
 				A83AAB872A6EB95C00EC8A3B /* BusStop.swift in Sources */,
 				D537A2642A5EF5C000796994 /* ViewController.swift in Sources */,
+				A8F32B082A7D939E0079BACA /* BusStopDetailsViewController.swift in Sources */,
+				245A215A2A6B0CF400B8F10A /* Notification.swift in Sources */,
+				24EF74F42A8450B700698921 /* ScheduleItem.swift in Sources */,
+				A83AAB872A6EB95C00EC8A3B /* BusStop.swift in Sources */,
+				D537A2642A5EF5C000796994 /* ViewController.swift in Sources */,
+				A84080072A815345007B0118 /* RouteDetailViewController.swift in Sources */,
 				A83AAB8B2A6EBCE000EC8A3B /* AdminStopsViewController.swift in Sources */,
 				A83AAB892A6EB98A00EC8A3B /* FirebaseManager.swift in Sources */,
 				A83AAB8D2A6ECB6500EC8A3B /* BusStopTableViewCell.swift in Sources */,
@@ -236,6 +265,8 @@
 				D537A2622A5EF5C000796994 /* SceneDelegate.swift in Sources */,
 				A83AAB852A6EB94200EC8A3B /* Route.swift in Sources */,
 				D5058BE82A70499B00C7CE79 /* OrdersViewController.swift in Sources */,
+				A813D9672A70A8CA000CEC5A /* AdminRoutesViewController.swift in Sources */,
+				A84080052A8152C9007B0118 /* RouteListViewController.swift in Sources */,
 				A8100EC42A69B17D00A4FDBE /* MapsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
