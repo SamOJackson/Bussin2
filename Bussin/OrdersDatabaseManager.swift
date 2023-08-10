@@ -10,8 +10,8 @@ import Foundation
 import Firebase
 
 class OrdersDatabaseManager {
-    var databaseReference: DatabaseReference!
-    
+    public var databaseReference: DatabaseReference!
+
     init() {
         databaseReference = Database.database().reference()
     }
