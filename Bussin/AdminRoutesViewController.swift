@@ -71,26 +71,34 @@ class AdminRoutesViewController: UIViewController {
         let stopIds = stopIdsString.components(separatedBy: ",")
         
         // Fetch the corresponding BusStop objects for the given stopIds
-        FirebaseManager.shared.fetchBusStopsForIds(stopIds) { busStopsForRoute in
-            // Create a new route with the fetched BusStop objects
-            let newRoute = Route(routeId: routeId, routeName: routeName, stops: busStopsForRoute)
+        FirebaseManager.shared.fetchBusStopsForIds(stopIds) { [weak self] busStopsForRoute in
+            guard let self = self else { return }
             
-            // Save the new route to Firebase
-            FirebaseManager.shared.createBusRoute(routeId: routeId, routeName: routeName, stopIds: stopIds) { error in
-                if let error = error {
-                    print("Error creating bus route: \(error.localizedDescription)")
-                } else {
-                    print("Bus route created successfully!")
-                    // Append the new route to the local busRoutes array and reload the table view
-                    self.busRoutes.append(newRoute)
-                    self.tableView.reloadData()
-                    
-                    // Clear the text fields after saving
-                    self.clearTextFields()
+            if busStopsForRoute.count == stopIds.count {
+                // Create a new route with the fetched BusStop objects
+                let newRoute = Route(routeId: routeId, routeName: routeName, stops: busStopsForRoute)
+                
+                // Save the new route to Firebase
+                FirebaseManager.shared.createBusRoute(routeId: routeId, routeName: routeName, stopIds: stopIds) { error in
+                    if let error = error {
+                        print("Error creating bus route: \(error.localizedDescription)")
+                    } else {
+                        print("Bus route created successfully!")
+                        // Append the new route to the local busRoutes array and reload the table view
+                        self.busRoutes.append(newRoute)
+                        self.tableView.reloadData()
+                        
+                        // Clear the text fields after saving
+                        self.clearTextFields()
+                    }
                 }
+            } else {
+                // The number of fetched BusStop objects doesn't match the number of stopIds
+                print("Error: Fetched BusStop count does not match stopIds count.")
             }
         }
     }
+
     
     
     // Function to clear the text fields

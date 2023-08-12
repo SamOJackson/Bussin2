@@ -437,20 +437,20 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusStopCell" id="918-Dy-Vav" customClass="BusStopTableViewCell" customModule="Bussin" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="42.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="390" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="918-Dy-Vav" id="k4z-bq-KOq">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="42.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMq-T3-RN7">
-                                                    <rect key="frame" x="16" y="11.000000000000002" width="14.333333333333336" height="20.666666666666671"/>
+                                                    <rect key="frame" x="16" y="11" width="14.333333333333336" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyp-cd-DwN">
-                                                    <rect key="frame" x="56" y="11.000000000000002" width="47" height="20.666666666666671"/>
+                                                    <rect key="frame" x="56" y="11" width="47" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1157,6 +1157,12 @@ CFBheW1lbnQ
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Route Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfM-bm-Pcr">
+                                <rect key="frame" x="71" y="127" width="250" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Nx-54-QNd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1164,6 +1170,7 @@ CFBheW1lbnQ
                     <navigationItem key="navigationItem" id="uHm-O3-e1q"/>
                     <connections>
                         <outlet property="busStopIdsTextField" destination="amD-p4-XFS" id="CxH-Br-tIX"/>
+                        <outlet property="routeIdTextField" destination="jfM-bm-Pcr" id="b8E-pn-Tb9"/>
                         <outlet property="routeNameTextField" destination="5Er-Zs-nI2" id="JNr-FK-Oea"/>
                         <outlet property="tableView" destination="Kxo-jM-wBS" id="Zin-fq-Ybe"/>
                     </connections>

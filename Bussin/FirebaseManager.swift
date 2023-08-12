@@ -208,7 +208,14 @@ class FirebaseManager {
             ]
             
             // Convert the BusStop objects to dictionaries
-            let stopDictionaries = busStopsForRoute.map { $0.toDictionary() }
+            let stopDictionaries = stopIds.map { stopId -> [String: Any] in
+                if let busStop = busStopsForRoute.first(where: { $0.stopId == stopId }) {
+                    return busStop.toDictionary()
+                } else {
+                    // Handle the case where bus stop is not found for the stopId
+                    return [:]
+                }
+            }
             
             // Add the BusStop dictionaries to the routeData
             routeData["stops"] = stopDictionaries
@@ -259,7 +266,14 @@ class FirebaseManager {
             ]
             
             // Convert the BusStop objects to dictionaries
-            let stopDictionaries = busStopsForRoute.map { $0.toDictionary() }
+            let stopDictionaries = stopIds.map { stopId -> [String: Any] in
+                if let busStop = busStopsForRoute.first(where: { $0.stopId == stopId }) {
+                    return busStop.toDictionary()
+                } else {
+                    // Handle the case where bus stop is not found for the stopId
+                    return [:]
+                }
+            }
             
             // Add the BusStop dictionaries to the routeData
             routeData["stops"] = stopDictionaries
