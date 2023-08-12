@@ -9,13 +9,10 @@
 /* Begin PBXBuildFile section */
 		2418CE942A698F6F00334EFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2418CE932A698F6F00334EFC /* GoogleService-Info.plist */; };
 		2418CE9B2A69912B00334EFC /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2418CE9A2A69912B00334EFC /* FirebaseDatabase */; };
-		2418CE9D2A69912B00334EFC /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2418CE9C2A69912B00334EFC /* FirebaseDatabaseSwift */; };
 		2418CE9F2A69AAB200334EFC /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2418CE9E2A69AAB200334EFC /* NotificationTableViewController.swift */; };
 		2418CEA12A69ACF100334EFC /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2418CEA02A69ACF100334EFC /* NotificationViewController.swift */; };
 		245A21582A6AF8EC00B8F10A /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A21572A6AF8EC00B8F10A /* NotificationTableViewCell.swift */; };
 		245A215A2A6B0CF400B8F10A /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A21592A6B0CF400B8F10A /* Notification.swift */; };
-		24EF74F12A844DC100698921 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2418CE962A69912B00334EFC /* FirebaseAnalytics */; };
-		24EF74F22A844DC100698921 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 2418CE982A69912B00334EFC /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		24EF74F42A8450B700698921 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EF74F32A8450B700698921 /* ScheduleItem.swift */; };
 		A8100EC42A69B17D00A4FDBE /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8100EC32A69B17D00A4FDBE /* MapsViewController.swift */; };
 		A813D9672A70A8CA000CEC5A /* AdminRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A813D9662A70A8C9000CEC5A /* AdminRoutesViewController.swift */; };
@@ -80,9 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24EF74F22A844DC100698921 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
-				24EF74F12A844DC100698921 /* FirebaseAnalytics in Frameworks */,
-				2418CE9D2A69912B00334EFC /* FirebaseDatabaseSwift in Frameworks */,
 				2418CE9B2A69912B00334EFC /* FirebaseDatabase in Frameworks */,
 				A83AAB902A6EDFBF00EC8A3B /* FirebaseFirestore in Frameworks */,
 				A83AAB922A6EDFC700EC8A3B /* FirebaseStorage in Frameworks */,
@@ -177,10 +171,7 @@
 			);
 			name = Bussin;
 			packageProductDependencies = (
-				2418CE962A69912B00334EFC /* FirebaseAnalytics */,
-				2418CE982A69912B00334EFC /* FirebaseAnalyticsWithoutAdIdSupport */,
 				2418CE9A2A69912B00334EFC /* FirebaseDatabase */,
-				2418CE9C2A69912B00334EFC /* FirebaseDatabaseSwift */,
 			);
 			productName = Bussin;
 			productReference = D537A25C2A5EF5C000796994 /* Bussin.app */;
@@ -500,25 +491,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2418CE962A69912B00334EFC /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2418CE952A69912B00334EFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		2418CE982A69912B00334EFC /* FirebaseAnalyticsWithoutAdIdSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2418CE952A69912B00334EFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsWithoutAdIdSupport;
-		};
 		2418CE9A2A69912B00334EFC /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2418CE952A69912B00334EFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
-		};
-		2418CE9C2A69912B00334EFC /* FirebaseDatabaseSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2418CE952A69912B00334EFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabaseSwift;
 		};
 		A83AAB8F2A6EDFBF00EC8A3B /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;

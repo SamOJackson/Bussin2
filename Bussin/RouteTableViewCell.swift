@@ -9,8 +9,7 @@ import UIKit
 
 class RouteTableViewCell: UITableViewCell {
     @IBOutlet weak var routeIdLabel: UILabel!
-    
     @IBOutlet weak var routeStopIdsLabel: UILabel!
     @IBOutlet weak var routeNameLabel: UILabel!
-
+    
 }

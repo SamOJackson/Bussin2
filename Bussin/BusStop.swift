@@ -16,22 +16,22 @@ struct BusStop {
     var schedule: [ScheduleItem]
     
     // Function to convert the BusStop object to a dictionary - for JSON serialization
-        func toDictionary() -> [String: Any] {
-            var scheduleArray: [[String: Any]] = []
-            for scheduleItem in schedule {
-                let scheduleDict: [String: Any] = [
-                    "dayOfWeek": scheduleItem.dayOfWeek,
-                    "times": scheduleItem.times
-                ]
-                scheduleArray.append(scheduleDict)
-            }
-
-            return [
-                "stopId": stopId,
-                "stopName": stopName,
-                "latitude": latitude,
-                "longitude": longitude,
-                "schedule": scheduleArray
+    func toDictionary() -> [String: Any] {
+        var scheduleArray: [[String: Any]] = []
+        for scheduleItem in schedule {
+            let scheduleDict: [String: Any] = [
+                "dayOfWeek": scheduleItem.dayOfWeek,
+                "times": scheduleItem.times
             ]
+            scheduleArray.append(scheduleDict)
         }
+        
+        return [
+            "stopId": stopId,
+            "stopName": stopName,
+            "latitude": latitude,
+            "longitude": longitude,
+            "schedule": scheduleArray
+        ]
+    }
 }

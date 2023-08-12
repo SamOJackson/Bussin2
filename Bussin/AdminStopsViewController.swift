@@ -7,32 +7,32 @@
 import UIKit
 
 class AdminStopsViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var stopIdTextField: UITextField!
     
     @IBOutlet weak var stopNameTextField: UITextField!
     @IBOutlet weak var latitudeTextField: UITextField!
     @IBOutlet weak var longitudeTextField: UITextField!
-
+    
     @IBOutlet weak var dayOfWeekTextField: UITextField!
     @IBOutlet weak var timesTextField: UITextField!
     
     var busStops: [BusStop] = []
     var selectedRowIndex: Int? // To keep track of the selected row index in the table view
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Set up table view delegate and data source
         tableView.delegate = self
         tableView.dataSource = self
-
+        
         // Fetch bus stops and display them in the table view
         fetchBusStops()
     }
-
+    
     // Fetch bus stops from Firebase and reload the table view
     func fetchBusStops() {
         FirebaseManager.fetchBusStops { (busStops, error) in
@@ -44,7 +44,7 @@ class AdminStopsViewController: UIViewController {
             }
         }
     }
-
+    
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         // Fetch the schedule details from the text fields
         guard let stopId = stopIdTextField.text, !stopId.isEmpty,
@@ -55,10 +55,10 @@ class AdminStopsViewController: UIViewController {
               let timesString = timesTextField.text, !timesString.isEmpty else {
             return
         }
-
+        
         // Convert the comma-separated times string to an array of strings
         let times = timesString.components(separatedBy: ",").map { $0.trimmingCharacters(in: .whitespaces) }
-
+        
         if let selectedIndex = selectedRowIndex {
             // Update or delete existing bus stop
             if selectedIndex >= 0 && selectedIndex < busStops.count {
@@ -67,7 +67,7 @@ class AdminStopsViewController: UIViewController {
                 busStopToUpdate.latitude = latitude
                 busStopToUpdate.longitude = longitude
                 busStopToUpdate.schedule = [ScheduleItem(dayOfWeek: dayOfWeek, times: times)]
-
+                
                 // Perform update operation
                 FirebaseManager.updateBusStop(busStop: busStopToUpdate) { error in
                     if let error = error {
@@ -91,7 +91,7 @@ class AdminStopsViewController: UIViewController {
                 }
             }
         }
-
+        
         // Clear the text fields after saving
         clearTextFields()
     }
@@ -137,32 +137,32 @@ extension AdminStopsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return busStops.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BusStopCell", for: indexPath) as? BusStopTableViewCell else {
             return UITableViewCell()
         }
-
+        
         let busStop = busStops[indexPath.row]
         cell.cellIdTextLabel.text = busStop.stopId
         cell.cellNameTextLabel.text = busStop.stopName
         cell.cellLatitudeLabel.text = String(busStop.latitude)
         cell.cellLongitudeLabel.text = String(busStop.longitude)
-
+        
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedBusStop = busStops[indexPath.row]
         stopIdTextField.text = selectedBusStop.stopId
         stopNameTextField.text = selectedBusStop.stopName
         latitudeTextField.text = String(selectedBusStop.latitude)
         longitudeTextField.text = String(selectedBusStop.longitude)
-
+        
         // Store the selected index to perform an update on saveButtonTapped
         selectedRowIndex = indexPath.row
     }
-
+    
     // Swipe to delete functionality
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {

@@ -14,6 +14,4 @@ class BusStopTableViewCell: UITableViewCell {
     @IBOutlet weak var cellLatitudeLabel: UILabel!
     @IBOutlet weak var cellLongitudeLabel: UILabel!
 
-    // Any additional setup or customization can be added here
-
 }

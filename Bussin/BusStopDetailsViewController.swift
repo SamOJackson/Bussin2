@@ -8,7 +8,7 @@
 import UIKit
 
 class BusStopDetailsViewController: UIViewController {
-
+    
     // Outlets for your UI elements (e.g., labels, table view)
     @IBOutlet weak var stopNameLabel: UILabel!
     @IBOutlet weak var daysOfWeekLabel: UILabel!
@@ -18,11 +18,11 @@ class BusStopDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Display the details of the selected bus stop
         if let busStop = selectedBusStop {
             stopNameLabel.text = busStop.stopName
-
+            
             // Prepare strings for schedule and daysOfWeek labels
             let scheduleString = busStop.schedule.map { "\($0.dayOfWeek): " + $0.times.joined(separator: ", ") }.joined(separator: "\n")
             let daysOfWeekString = busStop.schedule.map { $0.dayOfWeek }.joined(separator: ", ")

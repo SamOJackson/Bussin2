@@ -11,7 +11,7 @@ import Firebase
 class OrderViewController: UIViewController {
     
     let ordersDatabaseManager = OrdersDatabaseManager()
-
+    
     @IBOutlet weak var OrderNumber: UITextField!
     @IBOutlet weak var detailsText: UITextView!
     
@@ -46,5 +46,5 @@ class OrderViewController: UIViewController {
         }
     }
     
-
+    
 }
